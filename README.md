@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Usta Sigortacı — ustasigortaci.com
 
-## Getting Started
+sigortam.net benzeri, uçtan uca çalışan sigorta teklif karşılaştırma platformu. **Next.js 16 (App Router) + Tailwind v4 + TypeScript**.
 
-First, run the development server:
+## Özellikler
+
+- 14 sigorta ürünü (kasko, trafik, DASK, konut, TSS, özel sağlık, seyahat, hayat, ferdi kaza, evcil hayvan, cep telefonu, işyeri, İMM, yabancı sağlık) — her biri SEO odaklı ürün sayfasına sahip
+- Ürüne özel çok adımlı teklif formu → 12 anlaşmalı şirketten teklif listesi → yan yana karşılaştırma → mock ödeme → poliçe
+- Üyelik: kayıt, giriş, şifremi unuttum, hesabım (tekliflerim / poliçelerim / profil)
+- Referans siteye ek: Hasar Anında rehberi, Sigorta Sözlüğü, WhatsApp destek, poliçe yenileme hatırlatıcısı
+- SEO: metadata + canonical, Open Graph görselleri, JSON-LD (Organization, InsuranceAgency, Service, FAQPage, BreadcrumbList, Article, DefinedTerm), `sitemap.xml`, `robots.txt`, PWA manifest
+
+## Çalıştırma
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build && npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Demo hesap:** `demo@ustasigortaci.com` / `Demo1234`
 
-## Learn More
+## Deploy (Vercel)
 
-To learn more about Next.js, take a look at the following resources:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1emrahbayram-creator%2Fusta-sigortaci&project-name=usta-sigortaci&repository-name=usta-sigortaci&env=AUTH_SECRET&envDescription=Oturum%20cerezini%20imzalayan%20gizli%20anahtar%20(rastgele%20uzun%20bir%20metin))
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ortam değişkenleri:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Değişken | Açıklama |
+|---|---|
+| `AUTH_SECRET` | Oturum çerezini imzalayan gizli anahtar (zorunlu, rastgele uzun metin) |
+| `DATA_DIR` | JSON veri deposunun yazılacağı dizin (opsiyonel; varsayılan `.data/`, Vercel'de geçici dizin) |
 
-## Deploy on Vercel
+> Veri katmanı demo amaçlı dosya tabanlı bir JSON deposudur (`lib/db.ts`). Vercel gibi serverless ortamlarda veriler geçicidir; gerçek kullanım için Postgres/Prisma gibi bir veritabanına geçilmelidir.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Yapı
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/            sayfalar, API route'ları (auth, quotes, purchase), sitemap/robots/manifest
+components/     header, footer, teklif formu, teklif listesi, ödeme, auth formları, ikon seti
+lib/            ürün içerikleri, form tanımları, sigorta şirketleri, fiyatlama, db, auth
+```
