@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "./icons";
@@ -76,13 +77,16 @@ export function Header() {
       {/* Ana menü */}
       <div className="border-b border-navy-900/8 bg-white/95 backdrop-blur-md">
         <div className="container-x flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2" aria-label={`${site.name} ana sayfa`}>
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white">
-              <Icon name="shieldCheck" className="h-5.5 w-5.5" strokeWidth={2} />
-            </span>
-            <span className="font-display text-lg leading-none font-bold tracking-tight text-navy-950">
-              usta<span className="text-brand-600">sigortacı</span>
-            </span>
+          <Link href="/" className="flex shrink-0 items-center" aria-label={`${site.name} ana sayfa`}>
+            <Image
+              src="/brand/logo-horizontal-light.svg"
+              alt={site.legalName}
+              width={190}
+              height={40}
+              priority
+              unoptimized
+              className="h-9 w-auto sm:h-10"
+            />
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Ana menü">

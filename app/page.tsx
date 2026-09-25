@@ -407,7 +407,7 @@ export default function HomePage() {
 
       {/* ================= CTA ================= */}
       <section className="container-x pb-16 lg:pb-20">
-        <div className="relative overflow-hidden rounded-3xl bg-brand-600 px-6 py-12 text-center text-white sm:px-12">
+        <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-6 py-12 text-center text-white sm:px-12">
           <div
             className="absolute inset-0 opacity-10"
             style={{

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Icon } from "@/components/icons";
 import { site } from "@/lib/site";
@@ -103,11 +104,18 @@ export default function ContactPage() {
             Merkez Ofis
           </h2>
           <p className="text-sm leading-6 text-navy-900/70">{site.address}</p>
-          <div className="mt-4 flex h-44 items-center justify-center rounded-xl bg-cloud-100 text-navy-900/40">
-            <span className="flex items-center gap-2 text-sm">
-              <Icon name="mapPin" className="h-5 w-5" />
-              Harita görünümü
-            </span>
+          <div className="mt-4 flex items-center gap-4 rounded-xl bg-cloud-100 p-4">
+            <Image
+              src="/brand/qr.png"
+              alt="ustasigortaci.com QR kodu"
+              width={96}
+              height={96}
+              unoptimized
+              className="h-24 w-24 shrink-0 rounded-lg bg-white p-1"
+            />
+            <p className="text-sm leading-6 text-navy-900/70">
+              Telefonunuzla okutun; siteyi, WhatsApp hattımızı ve adresimizi cebinizde taşıyın.
+            </p>
           </div>
         </div>
         <div className="card p-6">

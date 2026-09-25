@@ -7,35 +7,35 @@
 
 @theme {
   /* Marka renkleri — derin lacivert + elektrik mavisi + sıcak turuncu */
-  --color-navy-950: #060f2c;
-  --color-navy-900: #0a1e4a;
-  --color-navy-800: #10295e;
-  --color-navy-700: #1a3775;
+  --color-navy-950: #081c47;
+  --color-navy-900: #0e2d6b;
+  --color-navy-800: #123a88;
+  --color-navy-700: #1749a5;
 
-  --color-brand-50: #eef4ff;
-  --color-brand-100: #dce8ff;
-  --color-brand-200: #b9d0ff;
-  --color-brand-300: #8bb0fc;
-  --color-brand-400: #5586f5;
-  --color-brand-500: #2e63ee;
-  --color-brand-600: #1552e8;
-  --color-brand-700: #113fc4;
-  --color-brand-800: #12359b;
-  --color-brand-900: #142f7a;
+  --color-brand-50: #ebf7fd;
+  --color-brand-100: #d2eefb;
+  --color-brand-200: #a9dff6;
+  --color-brand-300: #7bcdf0;
+  --color-brand-400: #5cc4ec;
+  --color-brand-500: #1fa3d8;
+  --color-brand-600: #1391c8;
+  --color-brand-700: #0b7fbf;
+  --color-brand-800: #0a6fae;
+  --color-brand-900: #0b5b8e;
 
-  --color-accent-50: #fff4e8;
-  --color-accent-100: #ffe6cc;
-  --color-accent-400: #ff9333;
-  --color-accent-500: #ff7a00;
-  --color-accent-600: #e86400;
-  --color-accent-700: #c04f00;
+  --color-accent-50: #ebf7fd;
+  --color-accent-100: #d2eefb;
+  --color-accent-400: #5cc4ec;
+  --color-accent-500: #1391c8;
+  --color-accent-600: #0b7fbf;
+  --color-accent-700: #0a6fae;
 
-  --color-cloud-50: #f7faff;
-  --color-cloud-100: #f0f5ff;
-  --color-cloud-200: #e3ecfc;
+  --color-cloud-50: #f5fafd;
+  --color-cloud-100: #ecf6fc;
+  --color-cloud-200: #d6ecf8;
 
-  --shadow-lift: 0 10px 40px -12px rgb(10 30 74 / 0.18);
-  --shadow-card: 0 2px 16px -4px rgb(10 30 74 / 0.10);
+  --shadow-lift: 0 10px 40px -12px rgb(14 45 107 / 0.18);
+  --shadow-card: 0 2px 16px -4px rgb(14 45 107 / 0.10);
 
   --animate-marquee: marquee 32s linear infinite;
   --animate-float: float 7s ease-in-out infinite;
@@ -90,10 +90,10 @@ h1, h2, h3, h4 {
     @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 disabled:cursor-not-allowed disabled:opacity-50;
   }
   .btn-primary {
-    @apply bg-brand-600 text-white hover:bg-brand-700 hover:shadow-lift active:scale-[0.98];
+    @apply bg-navy-900 text-white hover:bg-navy-950 hover:shadow-lift active:scale-[0.98];
   }
   .btn-accent {
-    @apply bg-accent-500 text-white hover:bg-accent-600 hover:shadow-lift active:scale-[0.98];
+    @apply bg-brand-600 text-white hover:bg-brand-700 hover:shadow-lift active:scale-[0.98];
   }
   .btn-outline {
     @apply border-2 border-navy-900/15 bg-white text-navy-900 hover:border-brand-600 hover:text-brand-700;
@@ -150,14 +150,14 @@ h1, h2, h3, h4 {
 /* Hero arka planı: yumuşak bulut degrade + ince grid deseni */
 .hero-bg {
   background:
-    radial-gradient(1100px 500px at 85% -10%, rgb(21 82 232 / 0.10), transparent 60%),
-    radial-gradient(900px 420px at 0% 0%, rgb(255 122 0 / 0.07), transparent 55%),
+    radial-gradient(1100px 500px at 85% -10%, rgb(31 163 216 / 0.16), transparent 60%),
+    radial-gradient(900px 420px at 0% 0%, rgb(92 196 236 / 0.14), transparent 55%),
     linear-gradient(180deg, var(--color-cloud-50) 0%, #ffffff 100%);
 }
 .hero-grid {
   background-image:
-    linear-gradient(rgb(10 30 74 / 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(10 30 74 / 0.045) 1px, transparent 1px);
+    linear-gradient(rgb(14 45 107 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(14 45 107 / 0.05) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
 }

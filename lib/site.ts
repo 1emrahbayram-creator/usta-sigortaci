@@ -1,5 +1,7 @@
 export const site = {
   name: "Usta Sigortacı",
+  legalName: "Usta Sigorta Aracılık Hizmetleri",
+  logo: "/brand/logo-stacked-navy.png",
   tagline: "Türkiye'nin usta işi sigorta platformu",
   description:
     "Kasko, trafik, DASK, sağlık ve 14 farklı sigorta türünde 25'ten fazla sigorta şirketinden saniyeler içinde teklif karşılaştırın, en uygun poliçeyi online satın alın.",

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 145" width="120" height="145" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4FC6EE"></stop><stop offset=".55" stop-color="#1FA3D8"></stop><stop offset="1" stop-color="#0B7FBF"></stop></linearGradient>
+    <linearGradient id="b2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FC6EE"></stop><stop offset=".55" stop-color="#1FA3D8"></stop><stop offset="1" stop-color="#0B7FBF"></stop></linearGradient>
+    <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ED0F2"></stop><stop offset="1" stop-color="#1B8FD0"></stop></linearGradient>
+    <linearGradient id="p2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ED0F2"></stop><stop offset="1" stop-color="#1B8FD0"></stop></linearGradient>
+    <radialGradient id="h" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#5ED0F2"></stop><stop offset=".6" stop-color="#1FA3D8"></stop><stop offset="1" stop-color="#0A6FAE"></stop></radialGradient>
+  </defs>
+  
+  <path d="M7 31 C12 56 32 72 56 73 L54 67 C40 63 30 50 27 34 Z" fill="url(#p1)"></path>
+  
+  <path d="M56 73 C88 71 110 38 115 8 L80 27 C77 50 67 65 54 67 Z" fill="url(#b1)"></path>
+  
+  <path d="M7 31 C12 56 32 72 56 73 C88 71 108 40 115 8" fill="none" stroke="#1B2A5A" stroke-width="1" stroke-linecap="round"></path>
+  
+  <path d="M5 137 C8 100 35 78 62 77 L65 82 C52 86 46 102 42 118 Z" fill="url(#b2)"></path>
+  
+  <path d="M62 77 C86 78 105 95 113 113 L90 110 C84 95 76 86 65 82 Z" fill="url(#p2)"></path>
+  
+  <path d="M5 137 C8 100 35 78 62 77 C86 78 105 95 113 113" fill="none" stroke="#1B2A5A" stroke-width="1" stroke-linecap="round"></path>
+  
+  <ellipse cx="54" cy="41.5" rx="16" ry="13.5" fill="url(#h)"></ellipse>
+  <path d="M38.5 44 A16 13.5 0 0 0 69.5 44" fill="none" stroke="#1B2A5A" stroke-width="0.9"></path>
+</svg>

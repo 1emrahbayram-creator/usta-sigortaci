@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "./icons";
 import { site } from "@/lib/site";
 import { products } from "@/lib/products";
@@ -8,13 +9,15 @@ export function Footer() {
     <footer className="bg-navy-950 text-white">
       <div className="container-x grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white">
-              <Icon name="shieldCheck" className="h-5.5 w-5.5" strokeWidth={2} />
-            </span>
-            <span className="font-display text-lg font-bold tracking-tight">
-              usta<span className="text-brand-400">sigortacı</span>
-            </span>
+          <Link href="/" className="inline-flex" aria-label={`${site.name} ana sayfa`}>
+            <Image
+              src="/brand/logo-horizontal-dark.svg"
+              alt={site.legalName}
+              width={228}
+              height={48}
+              unoptimized
+              className="h-11 w-auto"
+            />
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/60">
             {site.tagline}. {site.stats.partners} sigorta şirketinden anında teklif
@@ -71,7 +74,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/40 sm:flex-row">
-          <p>© 2026 {site.name}. Tüm hakları saklıdır.</p>
+          <p>© 2026 {site.legalName}. Tüm hakları saklıdır.</p>
           <p className="max-w-xl text-center sm:text-right">
             Usta Sigortacı bir sigorta brokerlik platformudur. Poliçeler, anlaşmalı sigorta
             şirketleri tarafından düzenlenir. Bu site demo amaçlı hazırlanmıştır.

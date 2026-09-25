@@ -68,7 +68,7 @@ export default function InsurersPage() {
         ))}
       </div>
 
-      <div className="card mt-12 flex flex-col items-center gap-4 bg-brand-600 p-8 text-center text-white sm:flex-row sm:text-left">
+      <div className="card mt-12 flex flex-col items-center gap-4 bg-navy-900 p-8 text-center text-white sm:flex-row sm:text-left">
         <Icon name="compare" className="h-10 w-10 shrink-0" />
         <div className="flex-1">
           <p className="text-lg font-bold">Hangisi size uygun bilemiyor musunuz?</p>

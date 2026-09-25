@@ -40,13 +40,13 @@ export function OfferList({ quoteId, offers }: { quoteId: string; offers: Offer[
         <div className="flex items-center gap-2 text-sm">
           <span className="text-navy-900/50">Sırala:</span>
           <button
-            className={`badge ${sort === "price" ? "bg-brand-600 text-white" : "bg-cloud-100 text-navy-900"}`}
+            className={`badge ${sort === "price" ? "bg-navy-900 text-white" : "bg-cloud-100 text-navy-900"}`}
             onClick={() => setSort("price")}
           >
             En uygun fiyat
           </button>
           <button
-            className={`badge ${sort === "rating" ? "bg-brand-600 text-white" : "bg-cloud-100 text-navy-900"}`}
+            className={`badge ${sort === "rating" ? "bg-navy-900 text-white" : "bg-cloud-100 text-navy-900"}`}
             onClick={() => setSort("rating")}
           >
             En yüksek puan

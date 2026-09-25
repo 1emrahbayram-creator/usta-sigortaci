@@ -135,7 +135,7 @@ export default function ClaimsPage() {
               <ol className="space-y-3">
                 {g.steps.map((s, i) => (
                   <li key={i} className="flex gap-3 text-sm leading-6 text-navy-900/75">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-bold text-white">
                       {i + 1}
                     </span>
                     {s}

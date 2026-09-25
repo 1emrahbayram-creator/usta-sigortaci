@@ -64,7 +64,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1552e8",
+  themeColor: "#0e2d6b",
   width: "device-width",
   initialScale: 1,
 };
@@ -73,6 +73,9 @@ const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   name: site.name,
+  legalName: site.legalName,
+  logo: `${site.url}${site.logo}`,
+  image: `${site.url}${site.logo}`,
   url: site.url,
   telephone: site.phone,
   email: site.email,

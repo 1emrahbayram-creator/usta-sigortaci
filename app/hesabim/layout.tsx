@@ -27,7 +27,7 @@ export default async function AccountLayout({ children }: { children: React.Reac
       <div className="container-x grid gap-8 py-10 lg:grid-cols-[260px_1fr]">
         <aside>
           <div className="card mb-4 flex items-center gap-3 p-5">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-600 text-base font-bold text-white">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-navy-900 text-base font-bold text-white">
               {user.name[0]?.toUpperCase()}
             </span>
             <div className="min-w-0">
