@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local json datastore
 .data/
+
+# İç DNS/host bilgisi içeren rehber PDF'leri (public repoya gitmesin)
+docs/*.pdf
