@@ -1,45 +1,31 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "./icons";
 import { site } from "@/lib/site";
 import { products, categoryLabels, type ProductCategory } from "@/lib/products";
 
-type SessionUser = { id: string; name: string; email: string } | null;
-
 const categories: ProductCategory[] = ["arac", "saglik", "konut", "yasam"];
 
+const navLinks = [
+  { href: "/hakkimizda", label: "Hakkımızda" },
+  { href: "/sigorta-sirketleri", label: "Sigorta Şirketleri" },
+  { href: "/hasar-aninda", label: "Hasar Anında" },
+  { href: "/blog", label: "Blog" },
+];
+
 export function Header() {
-  const [user, setUser] = useState<SessionUser>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
-  const [accountOpen, setAccountOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
-
-  useEffect(() => {
-    fetch("/api/auth/me")
-      .then((r) => r.json())
-      .then((d) => setUser(d.user ?? null))
-      .catch(() => setUser(null));
-  }, [pathname]);
 
   useEffect(() => {
     setMobileOpen(false);
     setMegaOpen(false);
-    setAccountOpen(false);
   }, [pathname]);
-
-  async function logout() {
-    await fetch("/api/auth/logout", { method: "POST" });
-    setUser(null);
-    setAccountOpen(false);
-    router.push("/");
-    router.refresh();
-  }
 
   return (
     <header className="sticky top-0 z-50">
@@ -129,7 +115,7 @@ export function Header() {
                       </div>
                     ))}
                     <div className="col-span-2 mt-2 flex items-center justify-between rounded-xl bg-cloud-100 px-4 py-3 md:col-span-4">
-                      <p className="text-sm font-semibold text-navy-900">14 sigorta türünde anında teklif</p>
+                      <p className="text-sm font-semibold text-navy-900">14 branşta sigorta danışmanlığı</p>
                       <Link href="/sigortalar" className="btn-primary btn-sm">
                         Tümünü Gör
                         <Icon name="arrowRight" className="h-4 w-4" />
@@ -139,49 +125,20 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Link href="/sigorta-sirketleri" className="btn-ghost btn-md">Sigorta Şirketleri</Link>
-            <Link href="/hasar-aninda" className="btn-ghost btn-md">Hasar Anında</Link>
-            <Link href="/blog" className="btn-ghost btn-md">Blog</Link>
-            <Link href="/sss" className="btn-ghost btn-md">S.S.S</Link>
+            {navLinks.map((l) => (
+              <Link key={l.href} href={l.href} className="btn-ghost btn-md">
+                {l.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-2">
-            {user ? (
-              <div className="relative hidden sm:block">
-                <button
-                  className="btn-outline btn-sm"
-                  onClick={() => setAccountOpen((v) => !v)}
-                  aria-expanded={accountOpen}
-                >
-                  <Icon name="user" className="h-4 w-4" />
-                  {user.name.split(" ")[0]}
-                  <Icon name="chevronDown" className="h-3.5 w-3.5" />
-                </button>
-                {accountOpen && (
-                  <div className="card absolute right-0 top-full mt-2 w-56 p-2 shadow-lift">
-                    <Link href="/hesabim" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm hover:bg-cloud-100">
-                      <Icon name="user" className="h-4 w-4 text-brand-600" /> Hesabım
-                    </Link>
-                    <Link href="/hesabim/tekliflerim" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm hover:bg-cloud-100">
-                      <Icon name="document" className="h-4 w-4 text-brand-600" /> Tekliflerim
-                    </Link>
-                    <Link href="/hesabim/policelerim" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm hover:bg-cloud-100">
-                      <Icon name="shieldCheck" className="h-4 w-4 text-brand-600" /> Poliçelerim
-                    </Link>
-                    <button onClick={logout} className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50">
-                      <Icon name="logout" className="h-4 w-4" /> Çıkış Yap
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link href="/giris" className="btn-outline btn-sm hidden sm:inline-flex">
-                <Icon name="user" className="h-4 w-4" />
-                Giriş Yap
-              </Link>
-            )}
-            <Link href="/sigortalar" className="btn-accent btn-sm hidden sm:inline-flex">
-              Hemen Teklif Al
+            <a href={site.phoneHref} className="btn-outline btn-sm hidden xl:inline-flex">
+              <Icon name="phoneCall" className="h-4 w-4" />
+              {site.phone}
+            </a>
+            <Link href="/iletisim" className="btn-accent btn-sm hidden sm:inline-flex">
+              Bize Ulaşın
             </Link>
             <button
               className="btn-ghost btn-sm lg:hidden"
@@ -220,21 +177,20 @@ export function Header() {
                 </div>
               ))}
               <div className="space-y-1 border-t border-navy-900/8 pt-3">
-                <Link href="/sigorta-sirketleri" className="block rounded-lg px-2 py-2 text-sm font-semibold">Sigorta Şirketleri</Link>
-                <Link href="/hasar-aninda" className="block rounded-lg px-2 py-2 text-sm font-semibold">Hasar Anında</Link>
-                <Link href="/blog" className="block rounded-lg px-2 py-2 text-sm font-semibold">Blog</Link>
+                {navLinks.map((l) => (
+                  <Link key={l.href} href={l.href} className="block rounded-lg px-2 py-2 text-sm font-semibold">
+                    {l.label}
+                  </Link>
+                ))}
                 <Link href="/sss" className="block rounded-lg px-2 py-2 text-sm font-semibold">Sık Sorulan Sorular</Link>
+                <Link href="/iletisim" className="block rounded-lg px-2 py-2 text-sm font-semibold">İletişim</Link>
               </div>
               <div className="flex gap-2 border-t border-navy-900/8 pt-4">
-                {user ? (
-                  <>
-                    <Link href="/hesabim" className="btn-outline btn-md flex-1">Hesabım</Link>
-                    <button onClick={logout} className="btn-ghost btn-md text-red-600">Çıkış</button>
-                  </>
-                ) : (
-                  <Link href="/giris" className="btn-outline btn-md flex-1">Giriş Yap</Link>
-                )}
-                <Link href="/sigortalar" className="btn-accent btn-md flex-1">Teklif Al</Link>
+                <a href={site.phoneHref} className="btn-outline btn-md flex-1">
+                  <Icon name="phoneCall" className="h-4 w-4" />
+                  Ara
+                </a>
+                <Link href="/iletisim" className="btn-accent btn-md flex-1">Bize Ulaşın</Link>
               </div>
             </div>
           </div>

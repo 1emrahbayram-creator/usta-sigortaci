@@ -84,13 +84,13 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="card mt-12 flex flex-col items-center gap-4 bg-navy-950 p-8 text-center text-white sm:flex-row sm:text-left">
           <Icon name="sparkle" className="h-10 w-10 shrink-0 text-accent-400" />
           <div className="flex-1">
-            <p className="text-lg font-bold">Fiyatları kendiniz karşılaştırın</p>
+            <p className="text-lg font-bold">Size özel teklif ister misiniz?</p>
             <p className="text-sm text-white/60">
-              25+ sigorta şirketinden 2 dakikada gerçek teklifler alın.
+              Danışmanlarımız 25+ sigorta şirketinden sizin için teklif alıp karşılaştırsın.
             </p>
           </div>
-          <Link href="/sigortalar" className="btn-accent btn-md whitespace-nowrap">
-            Teklif Al
+          <Link href="/iletisim" className="btn-accent btn-md whitespace-nowrap">
+            Bize Ulaşın
           </Link>
         </div>
       </div>

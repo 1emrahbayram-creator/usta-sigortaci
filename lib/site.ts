@@ -2,9 +2,9 @@ export const site = {
   name: "Usta Sigortacı",
   legalName: "Usta Sigorta Aracılık Hizmetleri",
   logo: "/brand/logo-stacked-navy.png",
-  tagline: "Türkiye'nin usta işi sigorta platformu",
+  tagline: "Ataşehir'de güvenilir sigorta acenteniz",
   description:
-    "Kasko, trafik, DASK, sağlık ve 14 farklı sigorta türünde 25'ten fazla sigorta şirketinden saniyeler içinde teklif karşılaştırın, en uygun poliçeyi online satın alın.",
+    "Usta Sigorta Aracılık Hizmetleri; kasko, trafik, DASK, sağlık ve 14 branşta 25'ten fazla sigorta şirketinden sizin için en uygun poliçeyi bulan, yenilemeden hasara kadar yanınızda olan Ataşehir merkezli sigorta acentesidir.",
   url: "https://ustasigortaci.com",
   phone: "0505 396 05 86",
   phoneHref: "tel:+905053960586",
@@ -37,7 +37,7 @@ export const site = {
     youtube: "https://youtube.com/@ustasigortaci",
   },
   stats: {
-    customers: "1,2 milyon+",
+    customers: "Binlerce",
     partners: "25+",
     products: "14",
     experience: "12",

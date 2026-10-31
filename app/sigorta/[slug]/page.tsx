@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ContactForm } from "@/components/contact-form";
 import { FaqJsonLd, FaqList } from "@/components/faq";
 import { Icon } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
-import { formatTL } from "@/lib/format";
 import { getProduct, products } from "@/lib/products";
 import { site } from "@/lib/site";
 
@@ -48,13 +47,12 @@ export default async function ProductPage({ params }: Props) {
     name: product.name,
     serviceType: product.name,
     description: product.metaDescription,
-    areaServed: { "@type": "Country", name: "Türkiye" },
-    provider: { "@type": "InsuranceAgency", name: site.name, url: site.url },
-    offers: {
-      "@type": "Offer",
-      price: product.priceFrom,
-      priceCurrency: "TRY",
-      description: "Başlangıç fiyatı — kişisel bilgilere göre değişir",
+    areaServed: { "@type": "City", name: "İstanbul" },
+    provider: {
+      "@type": "InsuranceAgency",
+      name: site.legalName,
+      url: site.url,
+      telephone: site.phone,
     },
   };
 
@@ -82,18 +80,17 @@ export default async function ProductPage({ params }: Props) {
               </h1>
               <p className="mt-4 max-w-xl text-lg leading-7 text-navy-900/70">{product.heroDesc}</p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link href={`/teklif/${product.slug}`} className="btn-accent btn-lg">
-                  Hemen Teklif Al
+                <a href="#bilgi-formu" className="btn-accent btn-lg">
+                  Bilgi ve Teklif İsteyin
                   <Icon name="arrowRight" className="h-5 w-5" />
-                </Link>
+                </a>
                 <a href={site.phoneHref} className="btn-outline btn-lg">
                   <Icon name="phoneCall" className="h-5 w-5" />
-                  Uzmana Danış
+                  {site.phone}
                 </a>
               </div>
               <p className="mt-5 text-sm text-navy-900/60">
-                Yıllık <strong className="text-navy-950">{formatTL(product.priceFrom)}</strong>
-                &apos;den başlayan fiyatlarla · 2 dakikada sonuç
+                Ücretsiz ihtiyaç analizi · {site.stats.partners} şirketten karşılaştırma · aynı gün poliçe
               </p>
             </div>
 
@@ -140,9 +137,9 @@ export default async function ProductPage({ params }: Props) {
         </section>
       )}
 
-      {/* SEO içerik */}
+      {/* SEO içerik + bilgi formu */}
       <section className="bg-cloud-50 py-14">
-        <div className="container-x grid gap-12 lg:grid-cols-[1fr_360px]">
+        <div className="container-x grid gap-12 lg:grid-cols-[1fr_380px]">
           <article className="prose-tr max-w-3xl">
             {product.sections.map((s) => (
               <div key={s.h}>
@@ -154,24 +151,15 @@ export default async function ProductPage({ params }: Props) {
             ))}
           </article>
 
-          <aside className="space-y-5 lg:sticky lg:top-32 lg:self-start">
-            <div className="card bg-navy-950 p-6 text-white">
-              <h3 className="text-lg font-bold">2 dakikada teklifiniz hazır</h3>
-              <p className="mt-2 text-sm text-white/60">
-                {site.stats.partners} şirketin {product.shortName.toLowerCase()} tekliflerini
-                ücretsiz karşılaştırın.
-              </p>
-              <Link href={`/teklif/${product.slug}`} className="btn-accent btn-md mt-5 w-full">
-                Teklif Al
-              </Link>
-            </div>
+          <aside id="bilgi-formu" className="space-y-5 scroll-mt-28 lg:sticky lg:top-32 lg:self-start">
+            <ContactForm defaultTopic={product.slug} compact />
             <div className="card p-6">
               <h3 className="flex items-center gap-2 text-sm font-bold text-navy-950">
                 <Icon name="headset" className="h-5 w-5 text-brand-600" />
-                Sorularınız mı var?
+                Hemen görüşmek ister misiniz?
               </h3>
               <p className="mt-2 text-xs text-navy-900/60">
-                SEGEM sertifikalı danışmanlarımız hafta içi 08:30 - 20:00 arasında yanınızda.
+                {site.founder.name}, {site.workingHours.toLowerCase()} arasında doğrudan ulaşabileceğiniz danışmanınız.
               </p>
               <a href={site.phoneHref} className="btn-outline btn-sm mt-4 w-full">
                 {site.phone}

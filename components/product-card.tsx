@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Product } from "@/lib/products";
-import { formatTL } from "@/lib/format";
 import { Icon } from "./icons";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -18,16 +17,10 @@ export function ProductCard({ product }: { product: Product }) {
         </Link>
       </h3>
       <p className="mt-1.5 flex-1 text-sm leading-6 text-navy-900/60">{product.tagline}</p>
-      <div className="mt-4 flex items-center justify-between border-t border-navy-900/8 pt-4">
-        <p className="text-xs text-navy-900/50">
-          <span className="block">Yıllık</span>
-          <strong className="text-base text-navy-950">{formatTL(product.priceFrom)}</strong>
-          <span>&apos;den başlayan</span>
-        </p>
-        <span className="btn-primary btn-sm pointer-events-none relative z-10 opacity-90 group-hover:opacity-100">
-          Teklif Al
-        </span>
-      </div>
+      <p className="mt-4 flex items-center gap-1.5 border-t border-navy-900/8 pt-4 text-sm font-semibold text-brand-700">
+        Detaylı bilgi
+        <Icon name="arrowRight" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </p>
     </article>
   );
 }

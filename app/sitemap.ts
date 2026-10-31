@@ -18,20 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/iletisim`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
   ];
 
-  const productPages: MetadataRoute.Sitemap = products.flatMap((p) => [
-    {
-      url: `${site.url}/sigorta/${p.slug}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${site.url}/teklif/${p.slug}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-  ]);
+  const productPages: MetadataRoute.Sitemap = products.map((p) => ({
+    url: `${site.url}/sigorta/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
 
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${site.url}/blog/${post.slug}`,

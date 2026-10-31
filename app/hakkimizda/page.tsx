@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Usta Sigortacı; 12 yıllık deneyimi, 25+ sigorta şirketi iş ortaklığı ve 1,2 milyon mutlu müşterisiyle Türkiye'nin usta işi sigorta platformudur.",
+    "Usta Sigorta Aracılık Hizmetleri; Ataşehir merkezli, 25'ten fazla sigorta şirketinin yetkili acentesi. Tarafsız danışmanlık, tek muhatap, hasarda 7/24 takip.",
   alternates: { canonical: "/hakkimizda" },
 };
 
@@ -15,22 +15,22 @@ const values = [
   {
     icon: "compare",
     title: "Şeffaflık",
-    desc: "Tüm teklifleri komisyon farkı gözetmeksizin, fiyat ve teminat detaylarıyla açıkça listeleriz.",
+    desc: "Aldığımız tüm teklifleri komisyon farkı gözetmeksizin, fiyat ve teminat detaylarıyla açıkça sunarız.",
   },
   {
     icon: "user",
     title: "Müşteri Odaklılık",
-    desc: "Poliçe satmakla bitmez; yenileme hatırlatmasından hasar takibine hep yanınızdayız.",
+    desc: "Poliçe düzenlemekle bitmez; yenileme hatırlatmasından hasar takibine hep yanınızdayız.",
   },
   {
     icon: "lightning",
-    title: "Teknoloji",
-    desc: "Sigorta şirketleriyle gerçek zamanlı entegrasyonlarımız sayesinde teklifler saniyeler içinde ekranınızda.",
+    title: "Hız",
+    desc: "Teklifleriniz 1 iş günü içinde elinizde; onayınızın ardından poliçeniz aynı gün düzenlenir.",
   },
   {
     icon: "shieldCheck",
     title: "Güven",
-    desc: "SEDDK lisanslı brokerlik, SEGEM sertifikalı danışmanlar ve SSL şifreli altyapı.",
+    desc: "Anlaşmalı şirketlerin yetkili acentesi, SEGEM sertifikalı danışman ve KVKK uyumlu veri yönetimi.",
   },
 ];
 
@@ -46,15 +46,16 @@ export default function AboutPage() {
           </h1>
           <div className="prose-tr mt-6">
             <p>
-              Usta Sigortacı, 2014 yılında tek bir soruyla yola çıktı: &quot;Sigorta almak neden
-              bu kadar karmaşık?&quot; Bugün 25&apos;ten fazla sigorta şirketiyle kurduğumuz
-              gerçek zamanlı entegrasyonlar sayesinde 1,2 milyondan fazla kişinin en uygun
-              poliçeye saniyeler içinde ulaşmasını sağlıyoruz.
+              {site.legalName}, Ataşehir merkezli bir sigorta acentesidir. Tek bir soruyla yola
+              çıktık: &quot;Sigorta almak neden bu kadar karmaşık?&quot; Bugün 25&apos;ten fazla
+              sigorta şirketinin yetkili acentesi olarak, müşterilerimizin ihtiyacına gerçekten
+              uyan poliçeyi bulmalarına yardım ediyoruz.
             </p>
             <p>
               Amacımız yalnızca en ucuz fiyatı göstermek değil; teminatları anlaşılır kılmak,
-              ihtiyacınıza gerçekten uyan ürünü bulmanıza yardım etmek ve hasar gününde
-              telefonun ucunda olmak.
+              doğru ürünü birlikte seçmek ve hasar gününde telefonun ucunda olmak. Bireysel
+              müşterilerimizin yanı sıra KOBİ&apos;lere işyeri, sorumluluk ve grup sağlık
+              sigortalarında da danışmanlık veriyoruz.
             </p>
           </div>
         </div>
@@ -62,7 +63,7 @@ export default function AboutPage() {
           {[
             [site.stats.customers, "Mutlu müşteri"],
             [`${site.stats.partners}`, "Anlaşmalı şirket"],
-            [`${site.stats.products}`, "Sigorta ürünü"],
+            [`${site.stats.products}`, "Sigorta branşı"],
             [`${site.stats.experience} yıl`, "Deneyim"],
           ].map(([num, label]) => (
             <div key={label} className="card p-6 text-center">
@@ -72,6 +73,36 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
+
+      <section className="mt-16" aria-labelledby="kurucu">
+        <div className="card grid gap-8 p-8 lg:grid-cols-[auto_1fr] lg:items-center">
+          <span className="flex h-24 w-24 items-center justify-center rounded-3xl bg-navy-900 font-display text-3xl font-bold text-white">
+            {site.founder.name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
+          </span>
+          <div>
+            <h2 id="kurucu" className="text-2xl font-bold text-navy-950">
+              {site.founder.name}
+            </h2>
+            <p className="text-sm font-semibold text-brand-700">{site.founder.title}</p>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-navy-900/70">
+              Sigorta sektöründe {site.stats.experience} yılı aşan deneyimiyle bireysel ve kurumsal
+              müşterilere kasko, trafik, sağlık, konut ve işyeri branşlarında danışmanlık veriyor.
+              Her müşterisiyle tekliften hasara kadar bizzat ilgilenmeyi acenteliğin esası sayıyor.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3 text-sm">
+              <a href={site.founder.phoneHref} className="flex items-center gap-1.5 font-semibold text-navy-900 hover:text-brand-700">
+                <Icon name="phoneCall" className="h-4 w-4 text-brand-600" /> {site.founder.phone}
+              </a>
+              <a href={`mailto:${site.founder.email}`} className="flex items-center gap-1.5 font-semibold text-navy-900 hover:text-brand-700">
+                <Icon name="mail" className="h-4 w-4 text-brand-600" /> {site.founder.email}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="mt-16" aria-labelledby="degerler">
         <h2 id="degerler" className="section-title mb-8">
@@ -93,9 +124,9 @@ export default function AboutPage() {
       <div className="card mt-16 flex flex-col items-center gap-4 bg-navy-950 p-8 text-center text-white sm:flex-row sm:text-left">
         <Icon name="headset" className="h-10 w-10 shrink-0 text-brand-300" />
         <div className="flex-1">
-          <p className="text-lg font-bold">Bizimle çalışmak ister misiniz?</p>
+          <p className="text-lg font-bold">Sigortanız için görüşelim</p>
           <p className="text-sm text-white/60">
-            Sorularınız, iş birliği teklifleriniz veya kariyer fırsatları için bize ulaşın.
+            İhtiyaç analizi ve teklif karşılaştırması ücretsizdir. Ofisimize bekleriz ya da sizi arayalım.
           </p>
         </div>
         <Link href="/iletisim" className="btn-accent btn-md whitespace-nowrap">

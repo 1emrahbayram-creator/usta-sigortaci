@@ -15,59 +15,59 @@ export const metadata: Metadata = {
 
 const homeFaqs = [
   {
-    q: "Usta Sigortacı nasıl çalışır?",
-    a: "Sigorta türünüzü seçip bilgilerinizi girersiniz; 25'ten fazla sigorta şirketinin gerçek zamanlı tekliflerini tek ekranda karşılaştırır, dilediğinizi online satın alırsınız. Poliçeniz anında e-postanıza gönderilir.",
+    q: "Usta Sigorta nasıl çalışır?",
+    a: "İhtiyacınızı telefon, WhatsApp veya formla bize iletirsiniz. Danışmanlarımız 25'ten fazla anlaşmalı sigorta şirketinden teklif alır, teminatları karşılaştırıp size en uygun seçenekleri sunar. Kararınızın ardından poliçeniz aynı gün düzenlenir.",
   },
   {
-    q: "Teklif almak ücretli mi?",
-    a: "Hayır. Teklif alma ve karşılaştırma tamamen ücretsizdir; poliçe fiyatlarına hiçbir aracılık ücreti eklenmez. Sigorta şirketinin sunduğu fiyatın aynısını ödersiniz.",
+    q: "Danışmanlık ve teklif alma ücretli mi?",
+    a: "Hayır. Teklif alma, karşılaştırma ve danışmanlık tamamen ücretsizdir. Sigorta şirketinin belirlediği primin dışında bize hiçbir ücret ödemezsiniz.",
   },
   {
-    q: "Poliçemi online satın alırsam güvende miyim?",
-    a: "Evet. Tüm poliçeler anlaşmalı sigorta şirketleri tarafından resmi olarak düzenlenir ve Sigorta Bilgi Merkezi'ne kaydedilir. Ödemeleriniz 256-bit SSL ve 3D Secure ile korunur.",
+    q: "Poliçemi nasıl alırım, ödemeyi nasıl yaparım?",
+    a: "Poliçeniz anlaşmalı sigorta şirketi tarafından resmi olarak düzenlenir ve Sigorta Bilgi Merkezi'ne kaydedilir. Primi şirketin güvenli ödeme bağlantısı veya banka kanalıyla ödersiniz; belgeniz e-posta ve WhatsApp ile iletilir.",
   },
   {
     q: "Hasar durumunda bana kim yardımcı olur?",
-    a: "7/24 hasar destek hattımız hasar ihbarınızı alır, dosyanızı sigorta şirketi nezdinde takip eder ve süreci sizin adınıza yönetir. Usta Sigortacı müşterisi olarak asla yalnız kalmazsınız.",
+    a: "Biz. Hasar hattımızı aradığınızda ihbarınızı alır, dosyanızı sigorta şirketi nezdinde açar ve ekspertizden tazminat ödemesine kadar süreci sizin adınıza takip ederiz.",
   },
   {
-    q: "Mevcut poliçemin bitiş tarihini nasıl takip ederim?",
-    a: "Ücretsiz üyelik oluşturduğunuzda poliçeleriniz hesabınıza tanımlanır; bitiş tarihi yaklaştığında SMS ve e-posta ile hatırlatma yaparız, tek tıkla yenilersiniz.",
+    q: "Poliçemin yenileme tarihini kim takip eder?",
+    a: "Biz takip ederiz. Poliçelerinizin bitiş tarihlerini kayıt altında tutar, süresi yaklaşmadan sizi arar ve güncel tekliflerle yenilemeyi tamamlarız; teminatsız kalmazsınız.",
   },
   {
     q: "Hangi sigorta şirketleriyle çalışıyorsunuz?",
-    a: "Anadolu Sigorta, Allianz, AXA, Aksigorta, Sompo, HDI, MAPFRE, Zurich ve Türkiye Sigorta dahil 25'ten fazla lider şirketle çalışıyoruz.",
+    a: "Anadolu Sigorta, Allianz, AXA, Aksigorta, Sompo, HDI, MAPFRE, Zurich ve Türkiye Sigorta dahil 25'ten fazla lider şirketin yetkili acentesiyiz.",
   },
 ];
 
 const steps = [
   {
-    icon: "document",
-    title: "Bilgilerinizi Girin",
-    desc: "Sigorta türünüzü seçin, birkaç temel bilgiyi 2 dakikada doldurun.",
+    icon: "phoneCall",
+    title: "Bize Ulaşın",
+    desc: "Telefon, WhatsApp veya formla ihtiyacınızı iletin; 1 iş günü içinde dönüş yapalım.",
   },
   {
     icon: "compare",
-    title: "Teklifleri Karşılaştırın",
-    desc: "25+ şirketin fiyat ve teminatlarını tarafsız biçimde yan yana görün.",
+    title: "İhtiyaç Analizi ve Karşılaştırma",
+    desc: "25+ şirketten teklif alır, fiyat ve teminatları tarafsızca yan yana koyarız.",
   },
   {
     icon: "shieldCheck",
-    title: "Anında Poliçeleşin",
-    desc: "Güvenli ödeme ile satın alın; poliçeniz saniyeler içinde e-postanızda.",
+    title: "Poliçeniz Hazır",
+    desc: "Seçiminizin ardından poliçeniz aynı gün düzenlenir; yenileme ve hasarda yanınızdayız.",
   },
 ];
 
 const valueProps = [
   {
     icon: "compare",
-    title: "Tarafsız Karşılaştırma",
-    desc: "Tek şirkete bağlı değiliz; algoritmamız her zaman size en uygun teklifi öne çıkarır.",
+    title: "Tarafsız Danışmanlık",
+    desc: "Tek şirkete bağlı değiliz; 25+ şirket arasından size gerçekten uyan teminatı öneririz.",
   },
   {
-    icon: "headset",
-    title: "Usta Danışmanlık",
-    desc: "SEGEM sertifikalı danışmanlarımız telefonda veya WhatsApp'ta yanınızda.",
+    icon: "user",
+    title: "Tek Muhatap",
+    desc: "Tekliften poliçeye, yenilemeden hasara kadar hep aynı danışmanla görüşürsünüz.",
   },
   {
     icon: "bell",
@@ -75,30 +75,30 @@ const valueProps = [
     desc: "Hasar sürecinizi sizin adınıza yönetir, dosyanızı sonuna kadar takip ederiz.",
   },
   {
-    icon: "lock",
-    title: "Güvenli Ödeme",
-    desc: "3D Secure ve 256-bit SSL ile ödeme; kart bilgileriniz asla saklanmaz.",
+    icon: "calendar",
+    title: "Yenileme Takibi",
+    desc: "Poliçe bitiş tarihlerinizi biz takip eder, süresi dolmadan sizi ararız.",
   },
 ];
 
 const testimonials = [
   {
     name: "Murat K.",
-    city: "İstanbul",
+    city: "Ataşehir",
     product: "Kasko",
-    text: "Yenileme döneminde eski şirketimden gelen fiyatın %30 altında kasko buldum. Karşılaştırma ekranı gerçekten şeffaf.",
+    text: "Yenileme döneminde beş şirketten teklif alıp karşılaştırdılar; eski fiyatımın %30 altında kasko yaptırdım. Tek telefonla hallettim.",
   },
   {
     name: "Elif D.",
-    city: "Ankara",
+    city: "Kadıköy",
     product: "Tamamlayıcı Sağlık",
-    text: "TSS poliçemi 10 dakikada aldım. Hastane ağını poliçe almadan görebilmek en çok işime yarayan detay oldu.",
+    text: "Hangi hastanelerin ağda olduğunu poliçe öncesinde tek tek anlattılar. Sorularıma WhatsApp'tan dakikalar içinde yanıt geldi.",
   },
   {
     name: "Serkan A.",
-    city: "İzmir",
+    city: "Ümraniye",
     product: "Trafik Sigortası",
-    text: "Kaza sonrası hasar hattını aradım, tüm süreci onlar yönetti. İyi ki buradan almışım dedirtti.",
+    text: "Kaza sonrası aradım, tutanaktan servise kadar tüm süreci onlar yürüttü. İyi ki bir acentem var dedirtti.",
   },
 ];
 
@@ -113,8 +113,8 @@ export default function HomePage() {
         <div className="container-x relative grid items-center gap-12 py-14 lg:grid-cols-2 lg:py-20">
           <div>
             <p className="rise rise-1 section-kicker">
-              <Icon name="sparkle" className="h-3.5 w-3.5" />
-              {site.stats.partners} sigorta şirketi, tek ekran
+              <Icon name="mapPin" className="h-3.5 w-3.5" />
+              Ataşehir · {site.stats.partners} anlaşmalı sigorta şirketi
             </p>
             <h1 className="rise rise-2 text-4xl leading-[1.1] font-bold text-navy-950 sm:text-5xl lg:text-[3.4rem]">
               Sigortada{" "}
@@ -131,36 +131,47 @@ export default function HomePage() {
               danışın.
             </h1>
             <p className="rise rise-3 mt-5 max-w-lg text-lg leading-7 text-navy-900/70">
-              Kasko&apos;dan DASK&apos;a 14 sigorta türünde saniyeler içinde teklif karşılaştırın,
-              en uygun poliçeyi online satın alın. Üstelik hasar anında da yanınızdayız.
+              Kasko&apos;dan DASK&apos;a 14 sigorta branşında {site.stats.partners} şirket arasından
+              size en uygun poliçeyi buluyor; yenilemeden hasara kadar yanınızda duruyoruz.
             </p>
 
-            <div className="rise rise-4 mt-8 flex flex-wrap items-center gap-6 text-sm text-navy-900/70">
+            <div className="rise rise-4 mt-8 flex flex-wrap gap-3">
+              <Link href="/iletisim" className="btn-accent btn-lg">
+                Bize Ulaşın
+                <Icon name="arrowRight" className="h-5 w-5" />
+              </Link>
+              <a href={site.phoneHref} className="btn-outline btn-lg">
+                <Icon name="phoneCall" className="h-5 w-5" />
+                {site.phone}
+              </a>
+            </div>
+
+            <div className="rise rise-5 mt-8 flex flex-wrap items-center gap-6 text-sm text-navy-900/70">
               <span className="flex items-center gap-2">
                 <Icon name="user" className="h-5 w-5 text-brand-600" />
                 <strong className="text-navy-950">{site.stats.customers}</strong> mutlu müşteri
               </span>
               <span className="flex items-center gap-2">
-                <Icon name="star" className="h-5 w-5 text-amber-400" />
-                <strong className="text-navy-950">4,8/5</strong> müşteri puanı
+                <Icon name="shieldCheck" className="h-5 w-5 text-brand-600" />
+                <strong className="text-navy-950">{site.stats.experience} yıl</strong> deneyim
               </span>
               <span className="flex items-center gap-2">
-                <Icon name="lightning" className="h-5 w-5 text-accent-500" />
-                <strong className="text-navy-950">2 dk</strong>&apos;da teklif
+                <Icon name="bell" className="h-5 w-5 text-brand-600" />
+                <strong className="text-navy-950">7/24</strong> hasar desteği
               </span>
             </div>
           </div>
 
-          {/* Hızlı ürün seçimi */}
+          {/* Branş seçimi */}
           <div className="rise rise-3">
             <div className="card p-6 shadow-lift sm:p-8">
-              <h2 className="mb-1 text-lg font-bold text-navy-950">Hangi sigortayı arıyorsunuz?</h2>
-              <p className="mb-5 text-sm text-navy-900/60">Seçin, 2 dakikada teklifiniz hazır.</p>
+              <h2 className="mb-1 text-lg font-bold text-navy-950">Hangi sigorta için danışmak istiyorsunuz?</h2>
+              <p className="mb-5 text-sm text-navy-900/60">Branşı seçin, detayları inceleyin; danışmanımız sizi arasın.</p>
               <div className="grid grid-cols-3 gap-3">
                 {popularProducts.map((p) => (
                   <Link
                     key={p.slug}
-                    href={`/teklif/${p.slug}`}
+                    href={`/sigorta/${p.slug}`}
                     className="group flex flex-col items-center gap-2 rounded-2xl border border-navy-900/8 bg-white p-4 text-center transition-all hover:-translate-y-0.5 hover:border-brand-600 hover:shadow-card"
                   >
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white">
@@ -183,7 +194,7 @@ export default function HomePage() {
               </div>
               <p className="mt-5 flex items-center justify-center gap-2 text-center text-xs text-navy-900/50">
                 <Icon name="lock" className="h-3.5 w-3.5" />
-                Ücretsiz ve yükümlülük olmadan teklif alın
+                Ücretsiz ihtiyaç analizi · yükümlülük yok
               </p>
             </div>
           </div>
@@ -193,7 +204,7 @@ export default function HomePage() {
       {/* ================= NASIL ÇALIŞIR ================= */}
       <section className="container-x py-16 lg:py-20" aria-labelledby="nasil-calisir">
         <div className="mb-10 text-center">
-          <p className="section-kicker">Nasıl çalışır?</p>
+          <p className="section-kicker">Nasıl çalışıyoruz?</p>
           <h2 id="nasil-calisir" className="section-title">
             3 adımda usta işi sigorta
           </h2>
@@ -219,9 +230,9 @@ export default function HomePage() {
         <div className="container-x">
           <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="section-kicker">Sigorta Ürünleri</p>
+              <p className="section-kicker">Hizmetlerimiz</p>
               <h2 id="urunler" className="section-title">
-                Tüm sigorta türleri tek adreste
+                Tüm sigorta branşları tek adreste
               </h2>
             </div>
             <Link href="/sigortalar" className="btn-outline btn-md">
@@ -242,7 +253,7 @@ export default function HomePage() {
         <div className="container-x mb-8 text-center">
           <p className="section-kicker">İş Ortaklarımız</p>
           <h2 id="partnerler" className="section-title">
-            Türkiye&apos;nin lider sigorta şirketleri
+            Türkiye&apos;nin lider sigorta şirketlerinin yetkili acentesiyiz
           </h2>
         </div>
         <div className="relative">
@@ -262,10 +273,7 @@ export default function HomePage() {
                 </span>
                 <div>
                   <p className="text-sm font-bold text-navy-950">{ins.name}</p>
-                  <p className="flex items-center gap-1 text-xs text-navy-900/50">
-                    <Icon name="star" className="h-3 w-3 text-amber-400" />
-                    {ins.rating.toFixed(1)}
-                  </p>
+                  <p className="text-xs text-navy-900/50">{ins.founded}&apos;den beri</p>
                 </div>
               </div>
             ))}
@@ -283,7 +291,7 @@ export default function HomePage() {
         <div className="container-x">
           <div className="mb-10 text-center">
             <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold tracking-wide text-brand-300 uppercase">
-              Neden Usta Sigortacı?
+              Neden Usta Sigorta?
             </p>
             <h2 id="neden-biz" className="text-2xl font-bold sm:text-3xl lg:text-4xl">
               Sigortayı sizin için kolaylaştırıyoruz
@@ -304,7 +312,7 @@ export default function HomePage() {
             {[
               [site.stats.customers, "Mutlu müşteri"],
               [site.stats.partners, "Anlaşmalı şirket"],
-              [`${site.stats.products} tür`, "Sigorta ürünü"],
+              [`${site.stats.products} branş`, "Sigorta ürünü"],
               [`${site.stats.experience} yıl`, "Sektör deneyimi"],
             ].map(([num, label]) => (
               <div key={label}>
@@ -316,79 +324,120 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= MÜŞTERİ YORUMLARI ================= */}
-      <section className="container-x py-16 lg:py-20" aria-labelledby="yorumlar">
-        <div className="mb-10 text-center">
-          <p className="section-kicker">Müşterilerimiz Anlatıyor</p>
-          <h2 id="yorumlar" className="section-title">
-            1,2 milyon kişi neden bizi seçti?
-          </h2>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure key={t.name} className="card flex flex-col p-6">
-              <div className="mb-3 flex gap-0.5 text-amber-400">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Icon key={i} name="star" className="h-4 w-4 fill-amber-400" />
-                ))}
-              </div>
-              <blockquote className="flex-1 text-sm leading-6 text-navy-900/75">
-                “{t.text}”
-              </blockquote>
-              <figcaption className="mt-4 flex items-center gap-3 border-t border-navy-900/8 pt-4">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">
-                  {t.name[0]}
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-navy-950">{t.name}</p>
-                  <p className="text-xs text-navy-900/50">
-                    {t.city} — {t.product}
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
-          ))}
+      {/* ================= KURUCU ================= */}
+      <section className="container-x py-16 lg:py-20" aria-labelledby="kurucu">
+        <div className="card grid gap-8 p-8 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:p-10">
+          <span className="flex h-24 w-24 items-center justify-center rounded-3xl bg-navy-900 font-display text-3xl font-bold text-white">
+            {site.founder.name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
+          </span>
+          <div>
+            <p className="section-kicker">Sizinle Görüşecek Kişi</p>
+            <h2 id="kurucu" className="text-2xl font-bold text-navy-950">
+              {site.founder.name} — {site.founder.title}
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-navy-900/70">
+              &quot;Sigorta, satıldığı gün değil hasar günü anlaşılır. Bu yüzden her müşterimizle
+              tekliften yenilemeye, hasardan tazminata kadar bizzat ilgileniyoruz. Aracı yok,
+              çağrı merkezi sırası yok; doğrudan ulaşırsınız.&quot;
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 lg:w-52">
+            <a href={site.founder.phoneHref} className="btn-primary btn-md">
+              <Icon name="phoneCall" className="h-4 w-4" />
+              {site.founder.phone}
+            </a>
+            <a
+              href={site.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline btn-md"
+            >
+              <Icon name="whatsapp" className="h-4 w-4 text-emerald-500" />
+              WhatsApp
+            </a>
+            <Link href="/hakkimizda" className="text-center text-sm font-semibold text-brand-700 hover:underline">
+              Hakkımızda →
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* ================= BLOG ================= */}
-      <section className="bg-cloud-50 py-16 lg:py-20" aria-labelledby="blog-basligi">
+      {/* ================= MÜŞTERİ YORUMLARI ================= */}
+      <section className="bg-cloud-50 py-16 lg:py-20" aria-labelledby="yorumlar">
         <div className="container-x">
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="section-kicker">Sigorta Rehberi</p>
-              <h2 id="blog-basligi" className="section-title">
-                Bilinçli sigortalı olun
-              </h2>
-            </div>
-            <Link href="/blog" className="btn-outline btn-md">
-              Tüm Yazılar
-              <Icon name="arrowRight" className="h-4 w-4" />
-            </Link>
+          <div className="mb-10 text-center">
+            <p className="section-kicker">Müşterilerimiz Anlatıyor</p>
+            <h2 id="yorumlar" className="section-title">
+              Müşterilerimiz neden bizi tercih ediyor?
+            </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {posts.slice(0, 3).map((post) => (
-              <article key={post.slug} className="card group relative flex flex-col p-6 transition-all hover:-translate-y-1 hover:shadow-lift">
-                <span className="badge mb-4 w-fit bg-brand-50 text-brand-700">{post.category}</span>
-                <h3 className="text-base leading-6 font-bold text-navy-950">
-                  <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0">
-                    {post.title}
-                  </Link>
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-6 text-navy-900/60">{post.excerpt}</p>
-                <p className="mt-4 flex items-center gap-2 text-xs text-navy-900/50">
-                  <Icon name="calendar" className="h-3.5 w-3.5" />
-                  {formatDate(post.date)} · {post.readMinutes} dk okuma
-                </p>
-              </article>
+            {testimonials.map((t) => (
+              <figure key={t.name} className="card flex flex-col p-6">
+                <div className="mb-3 flex gap-0.5 text-amber-400">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Icon key={i} name="star" className="h-4 w-4 fill-amber-400" />
+                  ))}
+                </div>
+                <blockquote className="flex-1 text-sm leading-6 text-navy-900/75">
+                  “{t.text}”
+                </blockquote>
+                <figcaption className="mt-4 flex items-center gap-3 border-t border-navy-900/8 pt-4">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-700">
+                    {t.name[0]}
+                  </span>
+                  <div>
+                    <p className="text-sm font-bold text-navy-950">{t.name}</p>
+                    <p className="text-xs text-navy-900/50">
+                      {t.city} — {t.product}
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ================= BLOG ================= */}
+      <section className="container-x py-16 lg:py-20" aria-labelledby="blog-basligi">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="section-kicker">Sigorta Rehberi</p>
+            <h2 id="blog-basligi" className="section-title">
+              Bilinçli sigortalı olun
+            </h2>
+          </div>
+          <Link href="/blog" className="btn-outline btn-md">
+            Tüm Yazılar
+            <Icon name="arrowRight" className="h-4 w-4" />
+          </Link>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {posts.slice(0, 3).map((post) => (
+            <article key={post.slug} className="card group relative flex flex-col p-6 transition-all hover:-translate-y-1 hover:shadow-lift">
+              <span className="badge mb-4 w-fit bg-brand-50 text-brand-700">{post.category}</span>
+              <h3 className="text-base leading-6 font-bold text-navy-950">
+                <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0">
+                  {post.title}
+                </Link>
+              </h3>
+              <p className="mt-2 flex-1 text-sm leading-6 text-navy-900/60">{post.excerpt}</p>
+              <p className="mt-4 flex items-center gap-2 text-xs text-navy-900/50">
+                <Icon name="calendar" className="h-3.5 w-3.5" />
+                {formatDate(post.date)} · {post.readMinutes} dk okuma
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* ================= SSS ================= */}
-      <section className="container-x py-16 lg:py-20" aria-labelledby="sss-basligi">
-        <div className="mx-auto max-w-3xl">
+      <section className="bg-cloud-50 py-16 lg:py-20" aria-labelledby="sss-basligi">
+        <div className="container-x mx-auto max-w-3xl">
           <div className="mb-10 text-center">
             <p className="section-kicker">Merak Edilenler</p>
             <h2 id="sss-basligi" className="section-title">
@@ -406,7 +455,7 @@ export default function HomePage() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="container-x pb-16 lg:pb-20">
+      <section className="container-x py-16 lg:py-20">
         <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-6 py-12 text-center text-white sm:px-12">
           <div
             className="absolute inset-0 opacity-10"
@@ -418,14 +467,15 @@ export default function HomePage() {
             aria-hidden="true"
           />
           <h2 className="relative text-2xl font-bold sm:text-3xl">
-            2 dakikanızı ayırın, yılda binlerce lira tasarruf edin
+            Sigortanızı ustasına bırakın
           </h2>
           <p className="relative mx-auto mt-3 max-w-xl text-white/80">
-            Teklif almak ücretsiz. Uzman danışmanlarımız her adımda yanınızda.
+            Bize ulaşın; ihtiyaç analizinizi yapalım, {site.stats.partners} şirketten teklif alıp
+            en uygununu birlikte seçelim. Danışmanlık ücretsiz.
           </p>
           <div className="relative mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/sigortalar" className="btn-accent btn-lg">
-              Hemen Teklif Al
+            <Link href="/iletisim" className="btn-accent btn-lg">
+              Bize Ulaşın
               <Icon name="arrowRight" className="h-5 w-5" />
             </Link>
             <a href={site.phoneHref} className="btn btn-lg bg-white/10 text-white ring-1 ring-white/30 hover:bg-white/20">

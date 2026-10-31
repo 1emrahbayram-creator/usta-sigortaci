@@ -9,15 +9,15 @@ export default function NotFound() {
       </span>
       <h1 className="text-3xl font-bold text-navy-950 sm:text-4xl">Sayfa bulunamadı</h1>
       <p className="mt-3 max-w-md text-navy-900/60">
-        Aradığınız sayfa taşınmış veya kaldırılmış olabilir. Sigorta teklifinizi almak için
-        ana sayfadan devam edebilirsiniz.
+        Aradığınız sayfa taşınmış veya kaldırılmış olabilir. Ana sayfadan devam edebilir ya da
+        bize ulaşabilirsiniz.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link href="/" className="btn-primary btn-lg">
           Ana Sayfaya Dön
         </Link>
-        <Link href="/sigortalar" className="btn-outline btn-lg">
-          Teklif Al
+        <Link href="/iletisim" className="btn-outline btn-lg">
+          Bize Ulaşın
         </Link>
       </div>
     </div>

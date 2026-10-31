@@ -49,7 +49,7 @@ export const posts: BlogPost[] = [
       {
         h: "Tasarruf İçin Öneriler",
         p: [
-          "Teminatları ihtiyacınıza göre sadeleştirin; kullanmayacağınız ek teminatlar primi şişirir. Servis ağı tercihinizi gözden geçirin: anlaşmalı servis seçeneği, yetkili servise göre %15-25 daha uygundur. Ve en önemlisi: her yenileme döneminde en az 5-6 şirketten teklif karşılaştırın. Usta Sigortacı'da bu karşılaştırma 2 dakika sürer.",
+          "Teminatları ihtiyacınıza göre sadeleştirin; kullanmayacağınız ek teminatlar primi şişirir. Servis ağı tercihinizi gözden geçirin: anlaşmalı servis seçeneği, yetkili servise göre %15-25 daha uygundur. Ve en önemlisi: her yenileme döneminde en az 5-6 şirketten teklif karşılaştırın. Usta Sigorta danışmanları bu karşılaştırmayı sizin için ücretsiz yapar.",
         ],
       },
     ],

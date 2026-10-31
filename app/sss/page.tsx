@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FaqJsonLd, FaqList } from "@/components/faq";
 import { site } from "@/lib/site";
@@ -7,34 +8,42 @@ import { products } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Sık Sorulan Sorular",
   description:
-    "Sigorta teklifi alma, online poliçe satın alma, ödeme, iptal ve hasar süreçleri hakkında sık sorulan sorular ve yanıtları.",
+    "Sigorta acentesiyle çalışmak, teklif ve danışmanlık süreci, poliçe düzenleme, ödeme, iptal ve hasar hakkında sık sorulan sorular ve yanıtları.",
   alternates: { canonical: "/sss" },
 };
 
 const generalFaqs = [
   {
-    q: "Usta Sigortacı'dan poliçe almak güvenli mi?",
-    a: "Evet. Poliçeleriniz doğrudan anlaşmalı sigorta şirketleri tarafından düzenlenir ve Sigorta Bilgi Merkezi'ne kaydedilir. Biz brokerlik hizmeti sunar, sizin adınıza en uygun teklifi buluruz.",
+    q: "Usta Sigorta ile çalışmak güvenli mi?",
+    a: "Evet. Usta Sigorta Aracılık Hizmetleri, anlaşmalı sigorta şirketlerinin yetkili acentesidir. Poliçeleriniz doğrudan ilgili sigorta şirketi tarafından düzenlenir ve Sigorta Bilgi Merkezi'ne kaydedilir; biz sizin adınıza en uygun teklifi bulur, süreci yönetiriz.",
   },
   {
-    q: "Teklif ve karşılaştırma hizmeti neden ücretsiz?",
-    a: "Gelirimizi sigorta şirketlerinden aldığımız komisyonlardan elde ederiz. Bu komisyon fiyata yansıtılmaz; şirketin kendi kanalından alacağınız fiyatla aynı, çoğu zaman kampanyalar sayesinde daha uygun fiyat alırsınız.",
+    q: "Danışmanlık ve teklif hizmeti neden ücretsiz?",
+    a: "Gelirimizi sigorta şirketlerinden aldığımız acentelik komisyonundan elde ederiz. Bu komisyon prime eklenmez; şirketin kendi kanalından alacağınız fiyatla aynı, çoğu zaman kampanyalar sayesinde daha uygun prim ödersiniz.",
   },
   {
-    q: "Poliçemi nasıl iptal edebilirim?",
-    a: "Çağrı merkezimizi arayarak veya hesabınızdan talep oluşturarak iptal başlatabilirsiniz. Kullanılmayan döneme ait prim, ürün şartlarına göre iade edilir. Seyahat sigortalarında vize reddi durumunda koşulsuz iade yapılır.",
+    q: "Teklif almak için ne yapmalıyım?",
+    a: "Telefon veya WhatsApp'tan bize ulaşın ya da sitedeki bilgi talep formunu doldurun. Danışmanımız 1 iş günü içinde sizi arar, ihtiyacınızı dinler ve 25'ten fazla şirketten aldığı teklifleri karşılaştırmalı olarak sunar.",
   },
   {
-    q: "Ödemeyi hangi yöntemlerle yapabilirim?",
-    a: "Tüm banka ve kredi kartlarıyla tek çekim veya taksitli ödeme yapabilirsiniz. Ödemeler 3D Secure doğrulamalı ve 256-bit SSL şifrelidir; kart bilgileriniz sistemimizde saklanmaz.",
+    q: "Ödemeyi nasıl yapıyorum?",
+    a: "Prim, poliçeyi düzenleyen sigorta şirketinin güvenli ödeme bağlantısı üzerinden kredi kartıyla (tek çekim veya taksitli) ya da banka havalesiyle ödenir. Kart bilgileriniz bizimle paylaşılmaz.",
   },
   {
     q: "Poliçem ne zaman başlar, belgemi nasıl alırım?",
-    a: "Ödemeniz onaylandığı anda poliçeniz kesilir ve PDF olarak e-postanıza gönderilir. Hesabım sayfanızdan da tüm poliçelerinize erişebilirsiniz.",
+    a: "Ödeme onaylandığı anda poliçeniz düzenlenir; PDF belgenizi e-posta ve WhatsApp ile iletiriz. Dilerseniz ofisimizden basılı nüsha da alabilirsiniz.",
+  },
+  {
+    q: "Poliçemi nasıl iptal edebilirim?",
+    a: "Bizi aramanız yeterli; iptal talebinizi sigorta şirketine iletir ve kullanılmayan döneme ait prim iadesini takip ederiz. Seyahat sigortalarında vize reddi durumunda koşulsuz iade yapılır.",
+  },
+  {
+    q: "Mevcut poliçem başka acenteden; size geçebilir miyim?",
+    a: "Evet. Yenileme döneminde bize ulaşmanız yeterli; hasarsızlık indiriminiz ve basamak bilginiz Sigorta Bilgi Merkezi kayıtlarıyla korunur, kaybınız olmaz.",
   },
   {
     q: "Hasar anında ne yapmalıyım?",
-    a: "7/24 hasar hattımızı arayın veya Hasar Anında sayfamızdaki adımları izleyin. Hasar dosyanızın açılışından tazminat ödemesine kadar tüm süreci sizin için takip ederiz.",
+    a: "Hasar hattımızı arayın veya Hasar Anında sayfamızdaki adımları izleyin. Dosyanızın açılışından tazminat ödemesine kadar tüm süreci sizin adınıza takip ederiz.",
   },
 ];
 
@@ -50,7 +59,11 @@ export default function FaqPage() {
       <div className="mx-auto mt-6 max-w-3xl">
         <h1 className="text-3xl font-bold text-navy-950 sm:text-4xl">Sık Sorulan Sorular</h1>
         <p className="mt-3 mb-10 text-navy-900/60">
-          Aradığınız yanıtı bulamazsanız {site.phone} numaralı hattımızdan bize ulaşabilirsiniz.
+          Aradığınız yanıtı bulamazsanız {site.phone} numaralı hattımızdan veya{" "}
+          <Link href="/iletisim" className="font-semibold text-brand-700 hover:underline">
+            iletişim sayfamızdan
+          </Link>{" "}
+          bize ulaşabilirsiniz.
         </p>
 
         <h2 className="mb-4 text-lg font-bold text-navy-950">Genel</h2>

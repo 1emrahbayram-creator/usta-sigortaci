@@ -20,8 +20,8 @@ export function Footer() {
             />
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/60">
-            {site.tagline}. {site.stats.partners} sigorta şirketinden anında teklif
-            karşılaştırın, poliçenizi online satın alın, hasar anında yanınızda olalım.
+            {site.tagline}. {site.stats.partners} sigorta şirketinin yetkili acentesi olarak size en
+            uygun poliçeyi buluyor, yenilemeden hasara kadar yanınızda duruyoruz.
           </p>
           <div className="mt-6 space-y-2 text-sm text-white/70">
             <a href={site.phoneHref} className="flex items-center gap-2 hover:text-white">
@@ -76,8 +76,8 @@ export function Footer() {
         <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/40 sm:flex-row">
           <p>© 2026 {site.legalName}. Tüm hakları saklıdır.</p>
           <p className="max-w-xl text-center sm:text-right">
-            Usta Sigortacı bir sigorta brokerlik platformudur. Poliçeler, anlaşmalı sigorta
-            şirketleri tarafından düzenlenir. Bu site demo amaçlı hazırlanmıştır.
+            {site.legalName}, anlaşmalı sigorta şirketleri adına sigorta aracılık hizmeti
+            sunar. Poliçeler ilgili sigorta şirketi tarafından düzenlenir.
           </p>
         </div>
       </div>

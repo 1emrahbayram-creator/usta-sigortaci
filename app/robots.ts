@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/hesabim", "/api/", "/satin-al/", "/teklif/sonuc/"],
+        disallow: ["/api/"],
       },
     ],
     sitemap: `${site.url}/sitemap.xml`,

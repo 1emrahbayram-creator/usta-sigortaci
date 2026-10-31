@@ -14,7 +14,6 @@ export type Product = {
   category: ProductCategory;
   icon: string;
   popular: boolean;
-  priceFrom: number;
   tagline: string;
   heroDesc: string;
   metaTitle: string;
@@ -33,13 +32,12 @@ export const products: Product[] = [
     category: "arac",
     icon: "car",
     popular: true,
-    priceFrom: 8450,
     tagline: "Aracınız her senaryoda güvende",
     heroDesc:
-      "Çarpma, çalınma, yanma, doğal afet ve daha fazlasına karşı aracınızı güvence altına alın. 20'den fazla sigorta şirketinin kasko tekliflerini 2 dakikada karşılaştırın.",
-    metaTitle: "Kasko Sigortası Fiyatları 2026 | En Uygun Kasko Teklifleri",
+      "Çarpma, çalınma, yanma, doğal afet ve daha fazlasına karşı aracınızı güvence altına alın. Danışmanlarımız 20'den fazla sigorta şirketinden sizin için teklif alır; en uygununu birlikte seçersiniz.",
+    metaTitle: "Kasko Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Kasko sigortası fiyatlarını 20+ şirketten anında karşılaştırın. En uygun kasko teklifini 2 dakikada alın, online satın alın. Hasarsızlık indirimi korunur.",
+      "Ataşehir merkezli Usta Sigorta, 20'den fazla şirketten kasko tekliflerini sizin için karşılaştırır. Hasarsızlık indiriminizi koruyan en uygun kasko poliçesi için bize ulaşın.",
     keywords: ["kasko", "kasko sigortası", "kasko fiyatları", "en uygun kasko", "kasko teklifi", "kasko hesaplama"],
     coverages: [
       { title: "Çarpma ve Çarpışma", desc: "Sabit veya hareketli cisimlerle çarpışma sonucu oluşan hasarlar" },
@@ -70,7 +68,7 @@ export const products: Product[] = [
       },
       {
         q: "Deprem ve sel kaskoya dahil mi?",
-        a: "Standart pakette olmayabilir; genişletilmiş kasko paketlerinde doğal afet teminatları yer alır. Teklif karşılaştırma ekranımızda hangi şirketin bu teminatları dahil ettiğini tek bakışta görebilirsiniz.",
+        a: "Standart pakette olmayabilir; genişletilmiş kasko paketlerinde doğal afet teminatları yer alır. Danışmanlarımız hangi şirketin bu teminatları dahil ettiğini sizin için karşılaştırır.",
       },
     ],
     sections: [
@@ -85,7 +83,7 @@ export const products: Product[] = [
         h: "En Uygun Kasko Fiyatı Nasıl Bulunur?",
         p: [
           "Aynı araç ve aynı sürücü profili için sigorta şirketlerinin kasko fiyatları arasında %40'a varan fark oluşabilir. Bunun nedeni her şirketin risk değerlendirme modelinin, hasar/prim dengesinin ve hedef portföyünün farklı olmasıdır.",
-          "Usta Sigortacı'da plaka ve ruhsat bilgilerinizi girerek 20'den fazla şirketin gerçek zamanlı tekliflerini tek ekranda görürsünüz. Teminat detaylarını yan yana karşılaştırır, dilerseniz uzman danışmanlarımızdan telefonla destek alırsınız. Poliçenizi online tamamladığınızda belgeleriniz anında e-postanıza gönderilir.",
+          "Usta Sigorta'da plaka ve ruhsat bilgilerinizi bize iletmeniz yeterli: danışmanlarımız 20'den fazla şirketten teklif alır, teminat detaylarını yan yana karşılaştırıp size sunar. Kararınızın ardından poliçeniz aynı gün düzenlenir ve belgeleriniz e-postanıza gönderilir.",
         ],
       },
     ],
@@ -97,13 +95,12 @@ export const products: Product[] = [
     category: "arac",
     icon: "traffic",
     popular: true,
-    priceFrom: 3120,
     tagline: "Yasal zorunluluğunuz en uygun fiyata",
     heroDesc:
-      "Zorunlu trafik sigortanızı yenilemek 2 dakikanızı alır. Tüm şirketlerin tekliflerini karşılaştırın, poliçeniz anında e-postanızda olsun.",
-    metaTitle: "Zorunlu Trafik Sigortası Fiyatları 2026 | Anında Teklif Al",
+      "Zorunlu trafik sigortanızı bize bırakın: tüm şirketlerin primlerini sizin için karşılaştırır, poliçenizi aynı gün düzenleyip e-postanıza göndeririz.",
+    metaTitle: "Zorunlu Trafik Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Zorunlu trafik sigortası fiyatlarını tüm şirketlerden anında sorgulayın. En ucuz trafik sigortası teklifini karşılaştırın, 2 dakikada online yaptırın.",
+      "Zorunlu trafik sigortanızda tüm şirketlerin primlerini sizin için karşılaştırır, en uygun poliçeyi aynı gün düzenleriz. Ataşehir sigorta acentesi Usta Sigorta.",
     keywords: ["trafik sigortası", "zorunlu trafik sigortası", "trafik sigortası fiyatları", "trafik sigortası sorgulama", "en ucuz trafik sigortası"],
     coverages: [
       { title: "Maddi Hasar", desc: "Karşı tarafın aracında ve eşyalarında oluşan zararlar" },
@@ -140,7 +137,7 @@ export const products: Product[] = [
       {
         h: "Trafik Sigortası Nasıl Sorgulanır?",
         p: [
-          "Aracınızın plakası ve TC kimlik numaranızla mevcut poliçenizi ve basamak bilginizi anında sorgulayabilirsiniz. Usta Sigortacı teklif ekranında bilgilerinizi girdiğinizde tüm şirketlerin güncel primleri saniyeler içinde listelenir; dilediğinizi seçip kredi kartıyla ödeyerek poliçenizi anında başlatabilirsiniz.",
+          "Aracınızın plakası ve TC kimlik numaranızla mevcut poliçenizi ve basamak bilginizi anında sorgulayabilirsiniz. Bize plaka ve kimlik bilginizi iletmeniz yeterli; danışmanlarımız tüm şirketlerin güncel primlerini sorgulayıp size en uygununu sunar, poliçeniz aynı gün düzenlenir.",
         ],
       },
     ],
@@ -152,13 +149,12 @@ export const products: Product[] = [
     category: "saglik",
     icon: "healthPlus",
     popular: true,
-    priceFrom: 4890,
     tagline: "Özel hastane konforu, SGK avantajıyla",
     heroDesc:
       "SGK anlaşmalı özel hastanelerde fark ücreti ödemeden muayene ve tedavi olun. Aylık bir yemek parasına özel hastane konforu.",
-    metaTitle: "Tamamlayıcı Sağlık Sigortası Fiyatları 2026 | TSS Teklifi Al",
+    metaTitle: "Tamamlayıcı Sağlık Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Tamamlayıcı sağlık sigortası (TSS) ile SGK anlaşmalı özel hastanelerde fark ücreti ödemeyin. En uygun TSS fiyatlarını karşılaştırın, anında satın alın.",
+      "Tamamlayıcı sağlık sigortası (TSS) ile SGK anlaşmalı özel hastanelerde fark ücreti ödemeyin. En uygun TSS planı için danışmanlarımızla görüşün.",
     keywords: ["tamamlayıcı sağlık sigortası", "TSS", "tamamlayıcı sağlık sigortası fiyatları", "özel hastane sigortası"],
     coverages: [
       { title: "Ayakta Tedavi", desc: "Muayene, tahlil, görüntüleme ve fizik tedavi giderleri" },
@@ -198,7 +194,7 @@ export const products: Product[] = [
         h: "TSS Fiyatlarını Etkileyen Faktörler",
         p: [
           "Yaş en belirleyici etkendir; genç yaşta poliçe başlatmak hem primi düşürür hem de ömür boyu yenileme garantisi kazanma şansı verir. Bunun yanında yaşadığınız il, seçtiğiniz hastane ağı (tüm ağ veya dar ağ) ve ayakta tedavi limitleri fiyatı etkiler.",
-          "Doğum teminatı, diş paketi gibi ek teminatlar primi artırır. Karşılaştırma ekranımızda her şirketin ağını ve limitlerini yan yana görebilir, bütçenize en uygun planı seçebilirsiniz.",
+          "Doğum teminatı, diş paketi gibi ek teminatlar primi artırır. Danışmanlarımız her şirketin hastane ağını ve limitlerini sizin için yan yana karşılaştırır; bütçenize en uygun planı birlikte seçersiniz.",
         ],
       },
     ],
@@ -210,11 +206,10 @@ export const products: Product[] = [
     category: "saglik",
     icon: "heartPulse",
     popular: false,
-    priceFrom: 14500,
     tagline: "Sağlığınız için en geniş güvence",
     heroDesc:
       "Türkiye'nin önde gelen özel hastanelerinde SGK şartı olmadan tedavi olun. Yatarak ve ayakta tedavide geniş limitli teminatlar.",
-    metaTitle: "Özel Sağlık Sigortası Fiyatları 2026 | Anında Teklif Karşılaştır",
+    metaTitle: "Özel Sağlık Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
       "Özel sağlık sigortası fiyatlarını önde gelen şirketlerden karşılaştırın. Geniş hastane ağı, yüksek limitler ve ömür boyu yenileme garantisi seçenekleri.",
     keywords: ["özel sağlık sigortası", "sağlık sigortası fiyatları", "özel sağlık sigortası teklif", "yenileme garantisi"],
@@ -257,13 +252,12 @@ export const products: Product[] = [
     category: "konut",
     icon: "quake",
     popular: true,
-    priceFrom: 1650,
     tagline: "Eviniz depreme karşı devlet güvencesinde",
     heroDesc:
-      "Zorunlu Deprem Sigortası'nı 2 dakikada yaptırın veya yenileyin. Tapu ve elektrik aboneliği işlemleriniz için DASK poliçeniz anında hazır.",
-    metaTitle: "DASK Sigortası 2026 | Zorunlu Deprem Sigortası Anında Yaptır",
+      "Zorunlu Deprem Sigortanızı aynı gün düzenliyoruz. Tapu ve elektrik aboneliği işlemleriniz için DASK poliçeniz hızla hazır.",
+    metaTitle: "DASK Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "DASK (Zorunlu Deprem Sigortası) fiyatı hesaplayın, poliçenizi 2 dakikada online yaptırın. DASK sorgulama ve yenileme işlemleri anında tamamlanır.",
+      "DASK (Zorunlu Deprem Sigortası) poliçenizi aynı gün düzenliyoruz. DASK sorgulama, yenileme ve tapu/abonelik işlemleri için Usta Sigorta Ataşehir.",
     keywords: ["DASK", "zorunlu deprem sigortası", "DASK fiyatı", "DASK hesaplama", "DASK sorgulama", "DASK yenileme"],
     coverages: [
       { title: "Bina Hasarı", desc: "Deprem ve deprem kaynaklı yangın, infilak, tsunami, yer kayması" },
@@ -286,7 +280,7 @@ export const products: Product[] = [
       },
       {
         q: "DASK poliçemi nasıl sorgularım?",
-        a: "Alo DASK 125 hattından veya e-Devlet üzerinden TC kimlik numaranızla mevcut poliçenizi sorgulayabilirsiniz. Usta Sigortacı hesabınızda da poliçeleriniz ve yenileme tarihleri takip edilir.",
+        a: "Alo DASK 125 hattından veya e-Devlet üzerinden TC kimlik numaranızla mevcut poliçenizi sorgulayabilirsiniz. Usta Sigorta müşterisiyseniz poliçelerinizi ve yenileme tarihlerinizi biz takip ederiz.",
       },
     ],
     sections: [
@@ -300,7 +294,7 @@ export const products: Product[] = [
       {
         h: "DASK Yenileme Neden Önemli?",
         p: [
-          "DASK poliçesi bir yıllıktır ve her yıl yenilenmesi gerekir. Poliçesi sona eren konutlar deprem anında teminatsız kalır. Usta Sigortacı'da poliçenizin bitiş tarihi yaklaştığında size SMS ve e-posta ile hatırlatma yaparız; tek tıkla yenileyebilirsiniz.",
+          "DASK poliçesi bir yıllıktır ve her yıl yenilenmesi gerekir. Poliçesi sona eren konutlar deprem anında teminatsız kalır. Usta Sigorta müşterisiyseniz poliçenizin bitiş tarihi yaklaştığında sizi arar, yenilemeyi sizin adınıza tamamlarız.",
         ],
       },
     ],
@@ -312,13 +306,12 @@ export const products: Product[] = [
     category: "konut",
     icon: "home",
     popular: false,
-    priceFrom: 2340,
     tagline: "Eviniz ve eşyalarınız tam güvende",
     heroDesc:
       "Yangından hırsızlığa, su baskınından cam kırılmasına eviniz ve içindeki her şey güvence altında. Paket seçenekleriyle ihtiyacınıza göre teminat.",
-    metaTitle: "Konut Sigortası Fiyatları 2026 | Ev Sigortası Teklifi Al",
+    metaTitle: "Konut Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Konut sigortası ile eviniz ve eşyalarınız yangın, hırsızlık, su baskını ve doğal afetlere karşı güvende. En uygun ev sigortası tekliflerini karşılaştırın.",
+      "Konut sigortası ile eviniz ve eşyalarınız yangın, hırsızlık, su baskını ve doğal afetlere karşı güvende. Size özel konut sigortası paketleri için danışmanlarımıza ulaşın.",
     keywords: ["konut sigortası", "ev sigortası", "konut sigortası fiyatları", "eşya sigortası"],
     coverages: [
       { title: "Yangın ve Yıldırım", desc: "Bina ve eşyalarda yangın kaynaklı tüm hasarlar" },
@@ -360,13 +353,12 @@ export const products: Product[] = [
     category: "yasam",
     icon: "plane",
     popular: true,
-    priceFrom: 480,
     tagline: "Yurt dışında sağlığınız güvende",
     heroDesc:
-      "Vize başvurularında geçerli, Schengen onaylı seyahat sağlık sigortanızı dakikalar içinde yaptırın. Bagaj kaybından tedavi masraflarına tam koruma.",
-    metaTitle: "Seyahat Sağlık Sigortası 2026 | Schengen Vize Sigortası Anında Al",
+      "Vize başvurularında geçerli, Schengen onaylı seyahat sağlık sigortanızı aynı gün hazırlayalım. Bagaj kaybından tedavi masraflarına tam koruma.",
+    metaTitle: "Seyahat Sağlık Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Schengen vizesi için geçerli seyahat sağlık sigortanızı anında yaptırın. 30.000 € teminatlı, konsolosluk onaylı poliçeniz 2 dakikada e-postanızda.",
+      "Schengen vizesi için geçerli, 30.000 € teminatlı ve konsolosluk onaylı seyahat sağlık sigortanızı aynı gün düzenleyip e-postanıza gönderiyoruz.",
     keywords: ["seyahat sağlık sigortası", "schengen vize sigortası", "yurt dışı seyahat sigortası", "vize sigortası"],
     coverages: [
       { title: "Tıbbi Tedavi", desc: "Yurt dışında ani hastalık ve kaza tedavi giderleri (30.000 € - 100.000 €)" },
@@ -407,13 +399,12 @@ export const products: Product[] = [
     category: "yasam",
     icon: "shieldHeart",
     popular: false,
-    priceFrom: 1980,
     tagline: "Sevdikleriniz her koşulda güvende",
     heroDesc:
       "Beklenmedik durumlarda ailenizin geleceğini güvence altına alın. Vefat, maluliyet ve kritik hastalık teminatlarıyla tam koruma.",
-    metaTitle: "Hayat Sigortası Fiyatları 2026 | Ailenizi Güvenceye Alın",
+    metaTitle: "Hayat Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Hayat sigortası ile sevdiklerinizin geleceğini güvence altına alın. Vefat, maluliyet ve kritik hastalık teminatlı planları karşılaştırın.",
+      "Hayat sigortası ile sevdiklerinizin geleceğini güvence altına alın. Vefat, maluliyet ve kritik hastalık teminatlı planlar için danışmanlarımızla görüşün.",
     keywords: ["hayat sigortası", "hayat sigortası fiyatları", "kredi hayat sigortası", "vefat teminatı"],
     coverages: [
       { title: "Vefat Teminatı", desc: "Her türlü vefat durumunda lehtarlara toplu ödeme" },
@@ -453,13 +444,12 @@ export const products: Product[] = [
     category: "yasam",
     icon: "bandage",
     popular: false,
-    priceFrom: 720,
     tagline: "Kazalara karşı 7/24 kişisel koruma",
     heroDesc:
       "Ani ve beklenmedik kazaların sonuçlarına karşı kendinizi ve ailenizi güvence altına alın. Uygun primlerle yüksek teminatlar.",
-    metaTitle: "Ferdi Kaza Sigortası 2026 | Uygun Primle Yüksek Teminat",
+    metaTitle: "Ferdi Kaza Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Ferdi kaza sigortası ile kaza sonucu vefat, maluliyet ve tedavi giderlerine karşı güvence altında olun. Fiyatları karşılaştırın, anında satın alın.",
+      "Ferdi kaza sigortası ile kaza sonucu vefat, maluliyet ve tedavi giderlerine karşı güvence altında olun. Uygun primli planlar için bize ulaşın.",
     keywords: ["ferdi kaza sigortası", "kaza sigortası", "ferdi kaza teminatları"],
     coverages: [
       { title: "Kaza Sonucu Vefat", desc: "Lehtarlara toplu tazminat ödemesi" },
@@ -494,13 +484,12 @@ export const products: Product[] = [
     category: "yasam",
     icon: "paw",
     popular: false,
-    priceFrom: 1450,
     tagline: "Patili dostlarınız için tam güvence",
     heroDesc:
       "Kedi ve köpeğinizin veteriner masrafları, ameliyatları ve tedavileri güvence altında. Türkiye'nin en kapsamlı pati sigortası.",
-    metaTitle: "Evcil Hayvan Sigortası 2026 | Kedi ve Köpek Sağlık Sigortası",
+    metaTitle: "Evcil Hayvan Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Evcil hayvan sigortası ile kedi ve köpeğinizin veteriner, ameliyat ve tedavi masrafları güvende. Pati dostu planları karşılaştırın.",
+      "Evcil hayvan sigortası ile kedi ve köpeğinizin veteriner, ameliyat ve tedavi masrafları güvende. Pati dostu planlar için bize ulaşın.",
     keywords: ["evcil hayvan sigortası", "kedi sigortası", "köpek sigortası", "pet sigortası", "veteriner masrafları"],
     coverages: [
       { title: "Veteriner Tedavi", desc: "Hastalık ve kaza kaynaklı muayene ve tedavi giderleri" },
@@ -535,13 +524,12 @@ export const products: Product[] = [
     category: "yasam",
     icon: "phone",
     popular: false,
-    priceFrom: 890,
     tagline: "Telefonunuz kırılmaya ve çalınmaya karşı korumada",
     heroDesc:
       "Ekran kırılması, sıvı teması ve çalınmaya karşı telefonunuzu güvence altına alın. Onarım anlaşmalı servislerde, değişim orijinal ürünle.",
-    metaTitle: "Cep Telefonu Sigortası 2026 | Ekran Kırılması ve Çalınma Güvencesi",
+    metaTitle: "Cep Telefonu Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "Cep telefonu sigortası ile ekran kırılması, sıvı teması ve çalınmaya karşı güvence altında olun. Telefon sigortası fiyatlarını karşılaştırın.",
+      "Cep telefonu sigortası ile ekran kırılması, sıvı teması ve çalınmaya karşı güvence altında olun. Telefon sigortası için danışmanlarımıza ulaşın.",
     keywords: ["cep telefonu sigortası", "telefon sigortası", "ekran kırılması sigortası"],
     coverages: [
       { title: "Kaza Sonucu Kırılma", desc: "Ekran ve gövde hasarları" },
@@ -575,13 +563,12 @@ export const products: Product[] = [
     category: "konut",
     icon: "store",
     popular: false,
-    priceFrom: 3980,
     tagline: "İşiniz ve emeğiniz güvence altında",
     heroDesc:
       "Dükkanınız, ofisiniz veya deponuz; demirbaş ve emtianızla birlikte yangın, hırsızlık ve doğal afetlere karşı güvende.",
-    metaTitle: "İşyeri Sigortası 2026 | KOBİ ve Esnaf Paketleri",
+    metaTitle: "İşyeri Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "İşyeri sigortası ile dükkan, ofis ve deponuz yangın, hırsızlık, su baskını risklerine karşı güvende. KOBİ paketlerini karşılaştırın.",
+      "İşyeri sigortası ile dükkan, ofis ve deponuz yangın, hırsızlık, su baskını risklerine karşı güvende. Size özel KOBİ paketleri için bize ulaşın.",
     keywords: ["işyeri sigortası", "dükkan sigortası", "kobi sigortası", "esnaf sigortası"],
     coverages: [
       { title: "Yangın ve Doğal Afet", desc: "Bina, demirbaş ve emtia hasarları" },
@@ -617,13 +604,12 @@ export const products: Product[] = [
     category: "arac",
     icon: "shieldPlus",
     popular: false,
-    priceFrom: 950,
     tagline: "Trafik sigortası limitlerinin ötesinde koruma",
     heroDesc:
       "Trafik sigortası limitlerini aşan hasarlarda devreye giren İMM ile milyonluk araçlara karşı kendinizi güvence altına alın.",
-    metaTitle: "İMM Sigortası 2026 | İhtiyari Mali Mesuliyet Teklifi Al",
+    metaTitle: "İMM Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "İMM (İhtiyari Mali Mesuliyet) sigortası ile trafik sigortası limitini aşan hasarlara karşı güvende olun. Limitsiz İMM fiyatlarını karşılaştırın.",
+      "İMM (İhtiyari Mali Mesuliyet) sigortası ile trafik sigortası limitini aşan hasarlara karşı güvende olun. Limitsiz İMM seçenekleri için danışmanlarımıza ulaşın.",
     keywords: ["imm", "ihtiyari mali mesuliyet", "limitsiz imm", "imm sigortası fiyatları"],
     coverages: [
       { title: "Maddi Hasar Ek Limiti", desc: "Trafik sigortası limitini aşan araç ve eşya hasarları" },
@@ -657,13 +643,12 @@ export const products: Product[] = [
     category: "saglik",
     icon: "globeHealth",
     popular: false,
-    priceFrom: 2750,
     tagline: "İkamet izni için uygun fiyatlı sağlık güvencesi",
     heroDesc:
-      "Türkiye'de ikamet izni başvurusu için gerekli, Göç İdaresi onaylı yabancı sağlık sigortanızı dakikalar içinde yaptırın.",
-    metaTitle: "Yabancı Sağlık Sigortası 2026 | İkamet İzni Sigortası",
+      "Türkiye'de ikamet izni başvurusu için gerekli, Göç İdaresi onaylı yabancı sağlık sigortanızı aynı gün hazırlayalım.",
+    metaTitle: "Yabancı Sağlık Sigortası | Usta Sigorta Ataşehir",
     metaDescription:
-      "İkamet izni başvurusu için Göç İdaresi kriterlerine uygun yabancı sağlık sigortası. Uygun fiyatlı planları karşılaştırın, poliçeniz anında hazır.",
+      "İkamet izni başvurusu için Göç İdaresi kriterlerine uygun yabancı sağlık sigortası. Uygun fiyatlı planlar ve aynı gün poliçe için Usta Sigorta Ataşehir.",
     keywords: ["yabancı sağlık sigortası", "ikamet izni sigortası", "yabancılar için sağlık sigortası", "residence permit insurance"],
     coverages: [
       { title: "Yatarak Tedavi", desc: "Ameliyat ve hastane yatış giderleri" },

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ContactForm } from "@/components/contact-form";
 import { Icon } from "@/components/icons";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "İletişim",
   description:
-    "Usta Sigortacı iletişim bilgileri: çağrı merkezi, WhatsApp destek hattı, e-posta ve ofis adresi. Hafta içi 08:30-20:00 hizmetinizdeyiz.",
+    "Usta Sigorta Ataşehir ofisi: telefon, WhatsApp, e-posta, adres ve bilgi talep formu. Sigorta ihtiyaçlarınız için hafta içi 08:30-20:00 hizmetinizdeyiz.",
   alternates: { canonical: "/iletisim" },
 };
 
@@ -80,6 +81,23 @@ export default function ContactPage() {
           Teklif, poliçe veya hasar süreçleriyle ilgili tüm sorularınız için buradayız.
         </p>
       </div>
+
+      <section id="bilgi-formu" className="mb-12 grid gap-6 lg:grid-cols-[1.3fr_1fr]" aria-labelledby="form-baslik">
+        <ContactForm />
+        <div className="card flex flex-col justify-center bg-navy-950 p-8 text-white">
+          <Icon name="headset" className="mb-4 h-10 w-10 text-brand-300" />
+          <h2 id="form-baslik" className="text-xl font-bold">Formu doldurun, sizi arayalım</h2>
+          <p className="mt-3 text-sm leading-6 text-white/70">
+            Hangi sigortaya ihtiyacınız olduğunu yazın; danışmanımız 1 iş günü içinde sizi
+            arayıp ihtiyaç analizi yapsın, 25+ şirketten teklif alıp en uygununu sunsun.
+          </p>
+          <ul className="mt-6 space-y-2 text-sm text-white/80">
+            <li className="flex items-center gap-2"><Icon name="check" className="h-4 w-4 text-brand-300" strokeWidth={2.5} /> Ücretsiz ihtiyaç analizi</li>
+            <li className="flex items-center gap-2"><Icon name="check" className="h-4 w-4 text-brand-300" strokeWidth={2.5} /> Tarafsız teklif karşılaştırması</li>
+            <li className="flex items-center gap-2"><Icon name="check" className="h-4 w-4 text-brand-300" strokeWidth={2.5} /> Aynı gün poliçe düzenleme</li>
+          </ul>
+        </div>
+      </section>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {channels.map((c) => (

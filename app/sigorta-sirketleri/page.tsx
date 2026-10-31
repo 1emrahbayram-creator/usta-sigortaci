@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Anlaşmalı Sigorta Şirketleri",
   description:
-    "Usta Sigortacı'ın çalıştığı anlaşmalı sigorta şirketleri: Anadolu Sigorta, Allianz, AXA, Aksigorta, Sompo ve daha fazlası. Tümünden tek ekranda teklif alın.",
+    "Usta Sigorta'nın yetkili acentesi olduğu sigorta şirketleri: Anadolu Sigorta, Allianz, AXA, Aksigorta, Sompo ve daha fazlası. Danışmanlarımız hepsinden sizin için teklif alır.",
   alternates: { canonical: "/sigorta-sirketleri" },
 };
 
@@ -37,8 +37,8 @@ export default function InsurersPage() {
           Anlaşmalı Sigorta Şirketleri
         </h1>
         <p className="mt-3 text-navy-900/60">
-          Türkiye&apos;nin önde gelen {insurers.length}+ sigorta şirketiyle çalışıyoruz. Tek form
-          doldurun, hepsinden aynı anda teklif alın.
+          Türkiye&apos;nin önde gelen {insurers.length}+ sigorta şirketiyle çalışıyoruz. İhtiyacınızı
+          bize iletin; danışmanlarımız hepsinden sizin için teklif alıp karşılaştırsın.
         </p>
       </div>
 
@@ -61,8 +61,8 @@ export default function InsurersPage() {
               </div>
             </div>
             <p className="flex-1 text-sm leading-6 text-navy-900/60">{ins.desc}</p>
-            <Link href="/sigortalar" className="btn-outline btn-sm mt-5 w-fit">
-              Teklif Al
+            <Link href="/iletisim" className="btn-outline btn-sm mt-5 w-fit">
+              Bilgi Alın
             </Link>
           </article>
         ))}
@@ -73,12 +73,12 @@ export default function InsurersPage() {
         <div className="flex-1">
           <p className="text-lg font-bold">Hangisi size uygun bilemiyor musunuz?</p>
           <p className="text-sm text-white/70">
-            Tek form doldurun; tüm şirketlerin tekliflerini fiyat ve teminat bazında karşılaştırın.
+            Bize ulaşın; tüm şirketlerin tekliflerini fiyat ve teminat bazında sizin için karşılaştıralım.
           </p>
         </div>
         <div className="flex gap-3">
-          <Link href="/sigortalar" className="btn-accent btn-md whitespace-nowrap">
-            Teklif Al
+          <Link href="/iletisim" className="btn-accent btn-md whitespace-nowrap">
+            Bize Ulaşın
           </Link>
           <a href={site.phoneHref} className="btn btn-md bg-white/10 text-white ring-1 ring-white/30 hover:bg-white/20">
             Bizi Arayın

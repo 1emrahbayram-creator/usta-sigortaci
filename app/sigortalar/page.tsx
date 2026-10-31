@@ -4,9 +4,9 @@ import { ProductCard } from "@/components/product-card";
 import { categoryLabels, getProductsByCategory, type ProductCategory } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Tüm Sigorta Ürünleri | 14 Türde Anında Teklif",
+  title: "Sigorta Ürünlerimiz | 14 Branşta Danışmanlık",
   description:
-    "Kasko, trafik, DASK, sağlık, konut, seyahat ve daha fazlası. 14 sigorta türünde 25+ şirketten anında teklif alın, fiyatları karşılaştırın.",
+    "Kasko, trafik, DASK, sağlık, konut, seyahat ve daha fazlası. 14 sigorta branşında 25+ şirket arasından size en uygun poliçeyi birlikte seçiyoruz. Ataşehir sigorta acentesi Usta Sigorta.",
   alternates: { canonical: "/sigortalar" },
 };
 
@@ -19,8 +19,8 @@ export default function SigortalarPage() {
       <div className="mt-6 mb-12 max-w-2xl">
         <h1 className="text-3xl font-bold text-navy-950 sm:text-4xl">Tüm Sigorta Ürünleri</h1>
         <p className="mt-3 text-navy-900/60">
-          İhtiyacınız hangisiyse seçin; 25&apos;ten fazla sigorta şirketinin tekliflerini
-          saniyeler içinde karşılaştırın.
+          İhtiyacınız hangisiyse inceleyin; danışmanlarımız 25&apos;ten fazla sigorta
+          şirketinden sizin için teklif alıp en uygununu birlikte seçsin.
         </p>
       </div>
 
