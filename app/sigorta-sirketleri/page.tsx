@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { PageHero } from "@/components/page-hero";
+import { pageImage } from "@/lib/images";
 import { Icon } from "@/components/icons";
 import { insurers } from "@/lib/insurers";
 import { site } from "@/lib/site";
@@ -32,15 +34,11 @@ export default function InsurersPage() {
       />
       <Breadcrumbs items={[{ name: "Sigorta Şirketleri" }]} />
 
-      <div className="mt-6 mb-12 max-w-2xl">
-        <h1 className="text-3xl font-bold text-navy-950 sm:text-4xl">
-          Anlaşmalı Sigorta Şirketleri
-        </h1>
-        <p className="mt-3 text-navy-900/60">
-          Türkiye&apos;nin önde gelen {insurers.length}+ sigorta şirketiyle çalışıyoruz. İhtiyacınızı
-          bize iletin; danışmanlarımız hepsinden sizin için teklif alıp karşılaştırsın.
-        </p>
-      </div>
+      <PageHero
+        title="Anlaşmalı Sigorta Şirketleri"
+        desc={`Türkiye'nin önde gelen ${insurers.length}+ sigorta şirketiyle çalışıyoruz. İhtiyacınızı bize iletin; danışmanlarımız hepsinden sizin için teklif alıp karşılaştırsın.`}
+        image={pageImage("sigorta-sirketleri")}
+      />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {insurers.map((ins) => (

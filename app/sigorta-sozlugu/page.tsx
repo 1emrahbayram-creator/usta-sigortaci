@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { PageHero } from "@/components/page-hero";
+import { pageImage } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -51,13 +53,11 @@ export default function GlossaryPage() {
       />
       <Breadcrumbs items={[{ name: "Sigorta Sözlüğü" }]} />
 
-      <div className="mt-6 mb-12 max-w-2xl">
-        <h1 className="text-3xl font-bold text-navy-950 sm:text-4xl">Sigorta Sözlüğü</h1>
-        <p className="mt-3 text-navy-900/60">
-          Poliçenizi okurken takıldığınız tüm terimler, sade Türkçeyle. Bilinçli sigortalının el
-          kitabı.
-        </p>
-      </div>
+      <PageHero
+        title="Sigorta Sözlüğü"
+        desc="Poliçenizi okurken takıldığınız tüm terimler, sade Türkçeyle. Bilinçli sigortalının el kitabı."
+        image={pageImage("sigorta-sozlugu")}
+      />
 
       <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {terms.map((t) => (

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Icon } from "@/components/icons";
 import { getPost, posts } from "@/lib/blog";
+import { postImage } from "@/lib/images";
 import { formatDate } from "@/lib/format";
 import { site } from "@/lib/site";
 
@@ -37,6 +39,7 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
 
+  const img = postImage(post.slug);
   const related = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   const articleJsonLd = {
@@ -47,6 +50,7 @@ export default async function BlogPostPage({ params }: Props) {
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "tr-TR",
+    image: [`${site.url}/blog/${post.slug}/opengraph-image`, `${site.url}${img.src}`],
     author: { "@type": "Organization", name: site.name, url: site.url },
     publisher: { "@type": "Organization", name: site.name, url: site.url },
     mainEntityOfPage: `${site.url}/blog/${post.slug}`,
@@ -69,6 +73,20 @@ export default async function BlogPostPage({ params }: Props) {
           <Icon name="calendar" className="h-4 w-4" />
           {formatDate(post.date)} · {post.readMinutes} dk okuma · {site.name} Editör Ekibi
         </p>
+
+        <figure className="mt-8">
+          <Image
+            src={img.src}
+            alt={img.alt}
+            width={img.width}
+            height={img.height}
+            priority
+            unoptimized
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="w-full rounded-2xl border border-navy-900/8"
+          />
+          <figcaption className="mt-2 text-xs text-navy-900/45">{img.alt}</figcaption>
+        </figure>
 
         <article className="prose-tr mt-10 border-t border-navy-900/8 pt-8">
           {post.sections.map((s, i) => (

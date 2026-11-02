@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-hyg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-hyg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-hyg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-hyg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-hyg"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-hyg)">
+    <rect width="800" height="600" fill="url(#sky-hyg)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="180" cy="188" rx="44" ry="25"/>
+      <ellipse cx="218" cy="182" rx="32" ry="19"/>
+      <ellipse cx="622" cy="240" rx="34" ry="19"/>
+      <ellipse cx="650" cy="236" rx="24" ry="14"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-hyg)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- uyarı üçgeni (çarpışmanın üstünde, tek küme) -->
+    <g transform="translate(267 300) scale(.74) translate(-400 -200)">
+      <path d="M393 148 C396 142 404 142 407 148 L455 232 C459 239 454 248 446 248 H354 C346 248 341 239 345 232 Z"
+            fill="url(#navy-hyg)"/>
+      <rect x="392" y="174" width="16" height="40" rx="8" fill="#FFFFFF"/>
+      <circle cx="400" cy="230" r="8" fill="#FFFFFF"/>
+    </g>
+
+    <!-- yol -->
+    <rect x="96" y="484" width="608" height="16" rx="8" fill="#D2EEFB"/>
+    <path d="M136 492 H200 M238 492 H302 M340 492 H404" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+
+    <!-- çarpışma ışınları (araçların arkasında; temas noktasından çıkar) -->
+    <g stroke="#1FA3D8" stroke-linecap="round" opacity=".85">
+      <path d="M267 450 V382" stroke-width="7"/>
+      <path d="M264 448 L244 378" stroke-width="5"/>
+      <path d="M270 448 L290 378" stroke-width="5"/>
+    </g>
+    <g fill="#5CC4EC" opacity=".65">
+      <circle cx="230" cy="370" r="5"/>
+      <circle cx="304" cy="370" r="5"/>
+    </g>
+
+    <!-- mavi araç (sağa bakıyor) -->
+    <g transform="translate(16 266) scale(.45)">
+      <path d="M232 440 L232 404 C232 394 238 386 248 383 L318 364 L362 318 C370 309 381 304 393 304 L470 304 C483 304 495 310 503 320 L540 366 L556 371 C566 374 572 383 572 393 L572 440 C572 448 566 454 558 454 L246 454 C238 454 232 448 232 440 Z"
+            fill="url(#blue-hyg)"/>
+      <path d="M234 428 L570 428 L570 440 C570 448 565 453 557 453 L247 453 C239 453 234 448 234 440 Z" fill="#0E2D6B" opacity=".14"/>
+      <path d="M374 330 L398 330 C402 330 404 332 404 336 L404 362 L346 362 Z" fill="#FFFFFF" opacity=".95"/>
+      <path d="M418 330 L466 330 C472 330 477 332 481 337 L501 362 L418 362 C415 362 414 360 414 357 L414 334 C414 331 415 330 418 330 Z" fill="#FFFFFF" opacity=".95"/>
+      <circle cx="306" cy="452" r="42" fill="url(#navy-hyg)"/>
+      <circle cx="306" cy="452" r="18" fill="#ECF6FC"/>
+      <circle cx="506" cy="452" r="42" fill="url(#navy-hyg)"/>
+      <circle cx="506" cy="452" r="18" fill="#ECF6FC"/>
+    </g>
+
+    <!-- lacivert araç (sola bakıyor) -->
+    <g transform="translate(518 266) scale(-.45 .45)">
+      <path d="M232 440 L232 404 C232 394 238 386 248 383 L318 364 L362 318 C370 309 381 304 393 304 L470 304 C483 304 495 310 503 320 L540 366 L556 371 C566 374 572 383 572 393 L572 440 C572 448 566 454 558 454 L246 454 C238 454 232 448 232 440 Z"
+            fill="url(#navy-hyg)"/>
+      <path d="M234 428 L570 428 L570 440 C570 448 565 453 557 453 L247 453 C239 453 234 448 234 440 Z" fill="#0E2D6B" opacity=".25"/>
+      <path d="M374 330 L398 330 C402 330 404 332 404 336 L404 362 L346 362 Z" fill="#ECF6FC" opacity=".9"/>
+      <path d="M418 330 L466 330 C472 330 477 332 481 337 L501 362 L418 362 C415 362 414 360 414 357 L414 334 C414 331 415 330 418 330 Z" fill="#ECF6FC" opacity=".9"/>
+      <circle cx="306" cy="452" r="42" fill="#0E2D6B"/>
+      <circle cx="306" cy="452" r="18" fill="#ECF6FC"/>
+      <circle cx="506" cy="452" r="42" fill="#0E2D6B"/>
+      <circle cx="506" cy="452" r="18" fill="#ECF6FC"/>
+    </g>
+
+    <!-- tutanak kartı -->
+    <rect x="440" y="280" width="168" height="196" rx="18" fill="#FFFFFF"/>
+    <rect x="440" y="280" width="168" height="196" rx="18" stroke="#0E2D6B" stroke-width="2" opacity=".12"/>
+    <rect x="462" y="306" width="78" height="16" rx="8" fill="url(#navy-hyg)"/>
+    <rect x="462" y="346" width="124" height="12" rx="6" fill="#D2EEFB"/>
+    <rect x="462" y="380" width="124" height="12" rx="6" fill="#D2EEFB"/>
+    <rect x="462" y="414" width="92" height="12" rx="6" fill="#D2EEFB"/>
+
+    <!-- mavi kalem -->
+    <g transform="rotate(26 556 388)">
+      <rect x="544" y="330" width="24" height="116" rx="10" fill="url(#blue-hyg)"/>
+      <rect x="544" y="330" width="24" height="18" rx="9" fill="#0E2D6B" opacity=".32"/>
+      <rect x="544" y="418" width="24" height="12" rx="6" fill="#FFFFFF" opacity=".6"/>
+      <path d="M544 444 H568 L560 466 C558 470 554 470 552 466 Z" fill="#0E2D6B"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

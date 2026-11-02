@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-im" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-im" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-im" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-im" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-im"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-im)">
+    <rect width="800" height="600" fill="url(#sky-im)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="180" cy="162" rx="44" ry="25"/>
+      <ellipse cx="218" cy="156" rx="32" ry="19"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-im)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- dış kalkan: kesik çizgili (genişletilmiş limit) -->
+    <path d="M400 155.5 L550.4 208.1 V317.2 C550.4 399.9 489.3 456.3 400 484.5 C310.7 456.3 249.6 399.9 249.6 317.2 V208.1 Z"
+          stroke="#5CC4EC" stroke-width="4" stroke-dasharray="16 16" stroke-linecap="round" opacity=".55"/>
+
+    <!-- iç kalkan -->
+    <path id="kalkan-im" d="M400 176.5 L531.2 222.4 V317.5 C531.2 389.7 477.9 438.9 400 463.5 C322.1 438.9 268.8 389.7 268.8 317.5 V222.4 Z"
+          fill="#0B7FBF" opacity=".15"/>
+    <use href="#kalkan-im" fill="none" stroke="#0B7FBF" stroke-width="4" opacity=".42"/>
+
+    <!-- yol -->
+    <rect x="96" y="486" width="608" height="16" rx="8" fill="#D2EEFB"/>
+    <path d="M160 494 H248 M300 494 H388 M444 494 H532 M584 494 H642" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+
+    <!-- kalkanın içindeki araç -->
+    <g transform="translate(400 345) scale(.8) translate(-433 -411)">
+      <path d="M312 434 V408 C312 400 317 394 325 392 L374 380 L402 346 C409 338 418 334 428 334 L484 334 C495 334 504 339 511 347 L533 381 L542 384 C549 386 554 393 554 401 V434 C554 440 550 444 544 444 H322 C316 444 312 440 312 434 Z"
+            fill="url(#blue-im)"/>
+      <path d="M314 427 H552 V434 C552 440 548 443 543 443 H323 C317 443 314 440 314 434 Z" fill="#0E2D6B" opacity=".12"/>
+      <path d="M414 352 L436 352 V376 H384 Z" fill="#FFFFFF" opacity=".95"/>
+      <path d="M448 352 L482 352 C488 352 494 356 498 361 L508 376 H448 Z" fill="#FFFFFF" opacity=".95"/>
+      <path d="M442 378 V432" stroke="#0E2D6B" stroke-width="3" opacity=".18" stroke-linecap="round"/>
+      <rect x="536" y="410" width="18" height="14" rx="6" fill="#FFFFFF" opacity=".95"/>
+      <rect x="312" y="410" width="14" height="14" rx="6" fill="#0E2D6B" opacity=".3"/>
+      <circle cx="372" cy="454" r="34" fill="url(#navy-im)"/>
+      <circle cx="372" cy="454" r="15" fill="#ECF6FC"/>
+      <circle cx="496" cy="454" r="34" fill="url(#navy-im)"/>
+      <circle cx="496" cy="454" r="15" fill="#ECF6FC"/>
+    </g>
+
+    <!-- limit artışı rozeti -->
+    <circle cx="582" cy="246" r="42" fill="#FFFFFF"/>
+    <circle cx="582" cy="246" r="34" fill="url(#navy-im)"/>
+    <path d="M582 224 L600 244 H590 V268 H574 V244 H564 Z" fill="#FFFFFF"/>
+
+    <!-- buz mavisi noktalar -->
+    <circle cx="208" cy="282" r="9" fill="#5CC4EC" opacity=".45"/>
+    <circle cx="178" cy="340" r="6" fill="#5CC4EC" opacity=".3"/>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

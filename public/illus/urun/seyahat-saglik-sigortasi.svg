@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-sy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-sy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-sy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-sy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-sy"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-sy)">
+    <rect width="800" height="600" fill="url(#sky-sy)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="184" cy="160" rx="46" ry="26"/>
+      <ellipse cx="224" cy="154" rx="34" ry="20"/>
+      <ellipse cx="330" cy="520" rx="40" ry="14" opacity=".5"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-sy)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- kesik çizgili rota yayı -->
+    <path d="M168 456 C248 430 310 392 368 348 C448 288 566 244 692 228"
+          stroke="#5CC4EC" stroke-width="7" stroke-linecap="round" stroke-dasharray="20 18" opacity=".75"/>
+    <circle cx="168" cy="456" r="10" fill="#1FA3D8" opacity=".6"/>
+    <circle cx="692" cy="228" r="12" fill="#1FA3D8" opacity=".35"/>
+
+    <!-- uçak: sağ yukarı doğru yükseliyor -->
+    <g transform="translate(420 348) rotate(-30) scale(.8)">
+      <!-- kanatlar -->
+      <path d="M92 -22 L36 -142 Q32 -150 22 -150 L2 -150 Q-10 -150 -6 -140 L18 -22 Z" fill="url(#navy-sy)"/>
+      <path d="M92 22 L36 142 Q32 150 22 150 L2 150 Q-10 150 -6 140 L18 22 Z" fill="url(#navy-sy)"/>
+      <!-- kuyruk kanatçıkları -->
+      <path d="M-78 -22 C-96 -36 -112 -52 -126 -64 Q-134 -70 -144 -68 Q-152 -66 -148 -58 L-140 -22 Z" fill="url(#navy-sy)"/>
+      <path d="M-78 22 C-96 36 -112 52 -126 64 Q-134 70 -144 68 Q-152 66 -148 58 L-140 22 Z" fill="url(#navy-sy)"/>
+      <!-- gövde -->
+      <path d="M152 0 C150 -14 128 -24 104 -25 L-114 -25 C-134 -25 -144 -14 -144 0 C-144 14 -134 25 -114 25 L104 25 C128 24 150 14 152 0 Z"
+            fill="url(#blue-sy)"/>
+      <!-- gövde alt gölgesi -->
+      <path d="M-120 14 L110 14 C126 14 142 10 150 4 C148 16 128 25 104 25 L-114 25 C-128 25 -138 20 -142 12 Z" fill="#0E2D6B" opacity=".12"/>
+      <!-- kokpit camı -->
+      <ellipse cx="112" cy="0" rx="24" ry="15" fill="#FFFFFF" opacity=".92"/>
+      <!-- pencereler -->
+      <g fill="#FFFFFF" opacity=".6">
+        <circle cx="60" cy="-14" r="5"/><circle cx="26" cy="-14" r="5"/><circle cx="-8" cy="-14" r="5"/><circle cx="-42" cy="-14" r="5"/>
+        <circle cx="60" cy="14" r="5"/><circle cx="26" cy="14" r="5"/><circle cx="-8" cy="14" r="5"/><circle cx="-42" cy="14" r="5"/>
+      </g>
+    </g>
+
+    <!-- dünya küresi -->
+    <circle cx="196" cy="436" r="64" fill="url(#blue-sy)"/>
+    <g stroke="#FFFFFF" fill="none" stroke-width="3.5" opacity=".5" stroke-linecap="round">
+      <path d="M132 436 H260"/>
+      <path d="M196 372 V500"/>
+      <ellipse cx="196" cy="436" rx="30" ry="64"/>
+    </g>
+    <path d="M196 372 C222 384 236 406 236 436 C236 466 222 488 196 500 Z" fill="#FFFFFF" opacity=".12"/>
+
+    <!-- bavul -->
+    <path d="M566 406 V388 Q566 374 580 374 L616 374 Q630 374 630 388 V406"
+          stroke="#0E2D6B" stroke-width="13" stroke-linecap="round"/>
+    <rect x="524" y="404" width="148" height="98" rx="18" fill="url(#navy-sy)"/>
+    <rect x="524" y="432" width="148" height="22" fill="url(#blue-sy)"/>
+    <circle cx="556" cy="443" r="6" fill="#FFFFFF" opacity=".85"/>
+    <circle cx="640" cy="443" r="6" fill="#FFFFFF" opacity=".85"/>
+    <rect x="536" y="470" width="124" height="8" rx="4" fill="#FFFFFF" opacity=".18"/>
+
+    <!-- buz mavisi noktalar -->
+    <g fill="#5CC4EC" opacity=".45">
+      <circle cx="330" cy="188" r="9"/>
+      <circle cx="712" cy="332" r="11"/>
+      <circle cx="104" cy="318" r="8"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

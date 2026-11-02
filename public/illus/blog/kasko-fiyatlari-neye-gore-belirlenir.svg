@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-bkf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-bkf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-bkf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-bkf" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-bkf"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-bkf)">
+    <rect width="800" height="600" fill="url(#sky-bkf)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="192" cy="158" rx="45" ry="25"/>
+      <ellipse cx="230" cy="152" rx="33" ry="19"/>
+      <ellipse cx="600" cy="236" rx="36" ry="20"/>
+      <ellipse cx="630" cy="232" rx="26" ry="15"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-bkf)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- taban / yol çizgisi -->
+    <rect x="96" y="478" width="608" height="14" rx="7" fill="#D2EEFB"/>
+    <path d="M150 485 H214 M250 485 H314" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+
+    <!-- azalan sütun grafiği -->
+    <rect x="470" y="300" width="56" height="186" rx="12" fill="url(#navy-bkf)"/>
+    <rect x="548" y="356" width="56" height="130" rx="12" fill="url(#blue-bkf)"/>
+    <rect x="626" y="412" width="56" height="74" rx="12" fill="#5CC4EC"/>
+    <!-- sütun üstü parlaklık -->
+    <g fill="#FFFFFF" opacity=".28">
+      <rect x="482" y="312" width="32" height="8" rx="4"/>
+      <rect x="560" y="368" width="32" height="8" rx="4"/>
+      <rect x="638" y="424" width="32" height="8" rx="4"/>
+    </g>
+
+    <!-- aşağı yönlü düşüş oku -->
+    <path d="M482 264 L562 318 L646 377" stroke="#1FA3D8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+    <polygon points="668,392 639,389 654,366" fill="#1FA3D8"/>
+    <circle cx="482" cy="264" r="9" fill="#1FA3D8" opacity=".85"/>
+
+    <!-- araç gövdesi -->
+    <path d="M150 446 L150 408 C150 398 156 391 165 388 L228 370 L264 332 C271 324 281 319 292 319 L350 319 C361 319 371 324 378 332 L408 370 L420 374 C429 377 434 385 434 394 L434 446 C434 453 429 458 422 458 L162 458 C155 458 150 453 150 446 Z"
+          fill="url(#blue-bkf)"/>
+    <!-- gövde alt gölge bandı -->
+    <path d="M152 434 L432 434 L432 446 C432 453 428 457 421 457 L163 457 C156 457 152 453 152 446 Z" fill="#0E2D6B" opacity=".12"/>
+    <!-- camlar -->
+    <path d="M274 342 L296 342 C299 342 301 344 301 347 L301 366 L254 366 Z" fill="#FFFFFF" opacity=".95"/>
+    <path d="M310 342 L348 342 C353 342 357 344 360 348 L376 366 L310 366 Z" fill="#FFFFFF" opacity=".95"/>
+    <!-- kapı ve tutamak -->
+    <path d="M304 368 L304 432" stroke="#0E2D6B" stroke-width="3" opacity=".18" stroke-linecap="round"/>
+    <path d="M238 402 H272" stroke="#FFFFFF" stroke-width="5" opacity=".5" stroke-linecap="round"/>
+    <!-- far ve stop -->
+    <rect x="414" y="400" width="20" height="14" rx="7" fill="#FFFFFF" opacity=".95"/>
+    <rect x="150" y="400" width="16" height="14" rx="7" fill="#0E2D6B" opacity=".35"/>
+
+    <!-- tekerlekler -->
+    <g>
+      <circle cx="214" cy="456" r="36" fill="url(#navy-bkf)"/>
+      <circle cx="214" cy="456" r="15" fill="#ECF6FC"/>
+      <circle cx="384" cy="456" r="36" fill="url(#navy-bkf)"/>
+      <circle cx="384" cy="456" r="15" fill="#ECF6FC"/>
+    </g>
+
+    <!-- buz mavisi noktalar -->
+    <g fill="#5CC4EC" opacity=".45">
+      <circle cx="116" cy="340" r="9"/>
+      <circle cx="140" cy="300" r="6"/>
+      <circle cx="700" cy="330" r="8"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

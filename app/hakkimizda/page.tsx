@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Icon } from "@/components/icons";
+import { pageImage } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -59,7 +61,20 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <Image
+          src={pageImage("hakkimizda").src}
+          alt={pageImage("hakkimizda").alt}
+          width={800}
+          height={600}
+          priority
+          unoptimized
+          sizes="(max-width: 1024px) 100vw, 520px"
+          className="w-full rounded-3xl border border-navy-900/8 shadow-[var(--shadow-card)]"
+        />
+      </div>
+
+      <div className="mt-10">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {[
             [site.stats.customers, "Mutlu müşteri"],
             [`${site.stats.partners}`, "Anlaşmalı şirket"],

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-ks" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-ks" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-ks" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-ks" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-ks"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-ks)">
+    <rect width="800" height="600" fill="url(#sky-ks)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="196" cy="156" rx="46" ry="26"/>
+      <ellipse cx="236" cy="150" rx="34" ry="20"/>
+      <ellipse cx="596" cy="226" rx="38" ry="21"/>
+      <ellipse cx="628" cy="222" rx="27" ry="16"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-ks)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- yol -->
+    <rect x="96" y="486" width="608" height="16" rx="8" fill="#D2EEFB"/>
+    <path d="M160 494 H250 M300 494 H390 M440 494 H530 M580 494 H640" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+
+    <!-- araç gövdesi -->
+    <path d="M232 440 L232 404 C232 394 238 386 248 383 L318 364 L362 318 C370 309 381 304 393 304 L470 304 C483 304 495 310 503 320 L540 366 L556 371 C566 374 572 383 572 393 L572 440 C572 448 566 454 558 454 L246 454 C238 454 232 448 232 440 Z"
+          fill="url(#blue-ks)"/>
+    <!-- gövde alt gölge bandı -->
+    <path d="M234 428 L570 428 L570 440 C570 448 565 453 557 453 L247 453 C239 453 234 448 234 440 Z" fill="#0E2D6B" opacity=".12"/>
+    <!-- camlar -->
+    <path d="M374 330 L398 330 C402 330 404 332 404 336 L404 362 L346 362 Z" fill="#FFFFFF" opacity=".95"/>
+    <path d="M418 330 L466 330 C472 330 477 332 481 337 L501 362 L418 362 C415 362 414 360 414 357 L414 334 C414 331 415 330 418 330 Z" fill="#FFFFFF" opacity=".95"/>
+    <!-- far ve stop -->
+    <rect x="552" y="398" width="20" height="15" rx="7" fill="#FFFFFF" opacity=".95"/>
+    <rect x="232" y="398" width="16" height="15" rx="7" fill="#0E2D6B" opacity=".35"/>
+    <!-- kapı çizgisi -->
+    <path d="M408 364 L408 428" stroke="#0E2D6B" stroke-width="3" opacity=".18" stroke-linecap="round"/>
+    <path d="M330 396 H372" stroke="#FFFFFF" stroke-width="5" opacity=".5" stroke-linecap="round"/>
+
+    <!-- tekerlekler -->
+    <g>
+      <circle cx="306" cy="452" r="42" fill="url(#navy-ks)"/>
+      <circle cx="306" cy="452" r="18" fill="#ECF6FC"/>
+      <circle cx="506" cy="452" r="42" fill="url(#navy-ks)"/>
+      <circle cx="506" cy="452" r="18" fill="#ECF6FC"/>
+    </g>
+
+    <!-- güvence rozeti -->
+    <g>
+      <circle cx="586" cy="300" r="40" fill="#FFFFFF"/>
+      <path d="M586 268 L612 278 V300 C612 317 601 329 586 334 C571 329 560 317 560 300 V278 Z" fill="url(#navy-ks)"/>
+      <path d="M575 300 L583 308 L599 291" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- hız/hareket çizgileri -->
+    <path d="M118 372 H196 M96 404 H168" stroke="#5CC4EC" stroke-width="7" stroke-linecap="round" opacity=".5"/>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

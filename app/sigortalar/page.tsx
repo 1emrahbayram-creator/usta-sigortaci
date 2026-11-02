@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { PageHero } from "@/components/page-hero";
+import { pageImage } from "@/lib/images";
 import { ProductCard } from "@/components/product-card";
 import { categoryLabels, getProductsByCategory, type ProductCategory } from "@/lib/products";
 
@@ -16,13 +18,11 @@ export default function SigortalarPage() {
   return (
     <div className="container-x py-10">
       <Breadcrumbs items={[{ name: "Sigortalar" }]} />
-      <div className="mt-6 mb-12 max-w-2xl">
-        <h1 className="text-3xl font-bold text-navy-950 sm:text-4xl">Tüm Sigorta Ürünleri</h1>
-        <p className="mt-3 text-navy-900/60">
-          İhtiyacınız hangisiyse inceleyin; danışmanlarımız 25&apos;ten fazla sigorta
-          şirketinden sizin için teklif alıp en uygununu birlikte seçsin.
-        </p>
-      </div>
+      <PageHero
+        title="Tüm Sigorta Ürünleri"
+        desc="İhtiyacınız hangisiyse inceleyin; danışmanlarımız 25'ten fazla sigorta şirketinden sizin için teklif alıp en uygununu birlikte seçsin."
+        image={pageImage("sigortalar")}
+      />
 
       <div className="space-y-14">
         {categories.map((cat) => (

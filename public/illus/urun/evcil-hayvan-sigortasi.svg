@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-eh" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-eh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-eh" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-eh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-eh"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-eh)">
+    <rect width="800" height="600" fill="url(#sky-eh)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="172" cy="166" rx="44" ry="25"/>
+      <ellipse cx="210" cy="160" rx="32" ry="19"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-eh)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- pati izi (sağ üst) -->
+    <g fill="url(#navy-eh)">
+      <ellipse cx="640" cy="240" rx="42" ry="35"/>
+      <circle cx="598" cy="190" r="15"/>
+      <circle cx="628" cy="174" r="16"/>
+      <circle cx="664" cy="176" r="16"/>
+      <circle cx="692" cy="198" r="15"/>
+    </g>
+
+    <!-- küçük mavi kalp (üstte) -->
+    <path d="M400 234 C386 224 370 212 370 198 C370 189 377 183 385 183 C391 183 396 187 400 192 C404 187 409 183 415 183 C423 183 430 189 430 198 C430 212 414 224 400 234 Z"
+          fill="#1FA3D8" opacity=".9"/>
+
+    <!-- zemin -->
+    <rect x="96" y="486" width="608" height="14" rx="7" fill="#D2EEFB"/>
+
+    <!-- kedi (solda, daha küçük) -->
+    <g fill="url(#navy-eh)">
+      <path d="M204 366 L197 332 Q196 326 202 329 L228 352 Z"/>
+      <path d="M248 366 L255 332 Q256 326 250 329 L224 352 Z"/>
+      <path d="M226 418 C202 418 188 442 188 462 C188 480 200 492 226 492 C252 492 264 480 264 462 C264 442 250 418 226 418 Z"/>
+      <circle cx="226" cy="388" r="34"/>
+    </g>
+    <path d="M262 480 Q300 482 300 452 Q300 430 280 434" stroke="#1749A5" stroke-width="15" stroke-linecap="round"/>
+    <g fill="#5CC4EC" opacity=".8">
+      <circle cx="215" cy="382" r="4.5"/>
+      <circle cx="237" cy="382" r="4.5"/>
+    </g>
+
+    <!-- köpek kuyruğu -->
+    <path d="M496 452 Q534 448 530 414" stroke="#0B7FBF" stroke-width="20" stroke-linecap="round"/>
+
+    <!-- köpek sarkık kulaklar -->
+    <path d="M382 266 C352 254 332 276 334 308 C336 340 356 358 374 350 C386 344 384 320 382 300 Z" fill="url(#navy-eh)"/>
+    <path d="M478 266 C508 254 528 276 526 308 C524 340 504 358 486 350 C474 344 476 320 478 300 Z" fill="url(#navy-eh)"/>
+
+    <!-- köpek gövdesi (oturan) -->
+    <path d="M430 348 C388 348 364 384 362 424 C360 462 376 490 430 490 C484 490 500 462 498 424 C496 384 472 348 430 348 Z"
+          fill="url(#blue-eh)"/>
+    <path d="M366 460 C372 482 392 490 430 490 C468 490 488 482 494 460 C496 476 486 490 430 490 C374 490 364 476 366 460 Z"
+          fill="#0E2D6B" opacity=".12"/>
+
+    <!-- ön patiler -->
+    <rect x="382" y="450" width="34" height="42" rx="17" fill="#5CC4EC"/>
+    <rect x="444" y="450" width="34" height="42" rx="17" fill="#5CC4EC"/>
+
+    <!-- köpek kafası -->
+    <circle cx="430" cy="300" r="62" fill="url(#blue-eh)"/>
+    <ellipse cx="430" cy="332" rx="31" ry="23" fill="#D2EEFB"/>
+    <ellipse cx="430" cy="322" rx="12" ry="9" fill="#0E2D6B"/>
+    <g fill="#0E2D6B" opacity=".85">
+      <circle cx="408" cy="288" r="6"/>
+      <circle cx="452" cy="288" r="6"/>
+    </g>
+
+    <!-- tasma -->
+    <path d="M378 356 Q430 386 482 356" stroke="url(#navy-eh)" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="430" cy="384" r="13" fill="#5CC4EC"/>
+
+    <!-- buz mavisi noktalar -->
+    <g fill="#5CC4EC" opacity=".4">
+      <circle cx="300" cy="196" r="9"/>
+      <circle cx="712" cy="368" r="11"/>
+      <circle cx="104" cy="302" r="8"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

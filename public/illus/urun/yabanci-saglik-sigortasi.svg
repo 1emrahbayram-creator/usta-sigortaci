@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-ys" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-ys" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-ys" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-ys" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-ys"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-ys)">
+    <rect width="800" height="600" fill="url(#sky-ys)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="184" cy="158" rx="44" ry="25"/>
+      <ellipse cx="222" cy="152" rx="32" ry="19"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-ys)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- dünya küresi (pasaportun arkasında) -->
+    <circle cx="400" cy="290" r="122" fill="#D2EEFB"/>
+    <circle cx="400" cy="290" r="122" fill="#5CC4EC" opacity=".14"/>
+    <circle cx="400" cy="290" r="122" stroke="#5CC4EC" stroke-width="3" opacity=".45"/>
+    <g stroke="#FFFFFF" fill="none">
+      <ellipse cx="400" cy="290" rx="46" ry="122" stroke-width="3" opacity=".9"/>
+      <ellipse cx="400" cy="290" rx="90" ry="122" stroke-width="2.5" opacity=".7"/>
+      <ellipse cx="400" cy="290" rx="122" ry="50" stroke-width="2.5" opacity=".7"/>
+    </g>
+
+    <!-- pasaport: lacivert kapak -->
+    <path d="M230 276 L400 302 L570 276 L570 440 L400 466 L230 440 Z" fill="url(#navy-ys)"/>
+    <!-- sol kapak amblemi -->
+    <circle cx="314" cy="372" r="36" stroke="#5CC4EC" stroke-width="4" opacity=".45"/>
+    <circle cx="314" cy="372" r="14" fill="#5CC4EC" opacity=".35"/>
+    <!-- sırt çizgisi -->
+    <path d="M400 302 V466" stroke="#0E2D6B" stroke-width="4" opacity=".45" stroke-linecap="round"/>
+
+    <!-- beyaz sayfa -->
+    <path d="M412 304 L556 282 V428 L412 450 Z" fill="#FFFFFF"/>
+    <!-- mavi artı işareti -->
+    <path d="M457 312 H483 V338 H509 V364 H483 V390 H457 V364 H431 V338 H457 Z" fill="url(#blue-ys)"/>
+    <!-- buz mavisi satır çizgileri -->
+    <rect x="428" y="402" width="112" height="9" rx="4.5" fill="#D2EEFB"/>
+    <rect x="428" y="417" width="92" height="8" rx="4" fill="#D2EEFB"/>
+    <rect x="428" y="431" width="52" height="8" rx="4" fill="#D2EEFB"/>
+
+    <!-- vize damgası -->
+    <circle cx="606" cy="226" r="54" stroke="#1FA3D8" stroke-width="7" opacity=".75"/>
+    <circle cx="606" cy="226" r="40" stroke="#5CC4EC" stroke-width="3" stroke-dasharray="11 12" stroke-linecap="round" opacity=".6"/>
+    <path d="M589 226 L601 239 L625 212" stroke="#0B7FBF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- buz mavisi noktalar -->
+    <circle cx="214" cy="226" r="9" fill="#5CC4EC" opacity=".45"/>
+    <circle cx="664" cy="340" r="8" fill="#5CC4EC" opacity=".4"/>
+    <circle cx="690" cy="392" r="6" fill="#5CC4EC" opacity=".3"/>
+
+    <ellipse cx="400" cy="492" rx="212" ry="24" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

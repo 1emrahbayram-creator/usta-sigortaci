@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FaqJsonLd } from "@/components/faq";
 import { Icon } from "@/components/icons";
+import { pageImage } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -120,9 +122,30 @@ export default function ClaimsPage() {
       </section>
 
       <section className="container-x py-16" aria-labelledby="rehberler">
-        <h2 id="rehberler" className="section-title mb-10 text-center">
-          Adım adım hasar rehberi
-        </h2>
+        <div className="mb-12 grid items-center gap-8 lg:grid-cols-[1fr_1.1fr]">
+          <Image
+            src={pageImage("hasar-aninda").src}
+            alt={pageImage("hasar-aninda").alt}
+            width={800}
+            height={600}
+            unoptimized
+            sizes="(max-width: 1024px) 100vw, 480px"
+            className="w-full rounded-3xl border border-navy-900/8 shadow-[var(--shadow-card)]"
+          />
+          <div>
+            <h2 id="rehberler" className="section-title">
+              Adım adım hasar rehberi
+            </h2>
+            <p className="mt-4 text-navy-900/65">
+              Hasar anında ilk dakikalar süreci belirler. Aşağıdaki adımları uygulayın, gerisini
+              biz hallederiz: dosya açılışı, ekspertiz randevusu ve tazminat takibi bizde.
+            </p>
+            <a href={site.phoneHref} className="btn-primary btn-md mt-6">
+              <Icon name="phoneCall" className="h-4 w-4" />
+              Hasar hattını ara
+            </a>
+          </div>
+        </div>
         <div className="grid gap-6 md:grid-cols-2">
           {guides.map((g) => (
             <article key={g.title} className="card p-6 sm:p-8">

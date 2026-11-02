@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ContactForm } from "@/components/contact-form";
 import { FaqJsonLd, FaqList } from "@/components/faq";
 import { Icon } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
+import { productImage } from "@/lib/images";
 import { getProduct, products } from "@/lib/products";
 import { site } from "@/lib/site";
 
@@ -37,6 +39,7 @@ export default async function ProductPage({ params }: Props) {
   const product = getProduct(slug);
   if (!product) notFound();
 
+  const img = productImage(product.slug);
   const related = products
     .filter((p) => p.category === product.category && p.slug !== product.slug)
     .slice(0, 3);
@@ -47,6 +50,7 @@ export default async function ProductPage({ params }: Props) {
     name: product.name,
     serviceType: product.name,
     description: product.metaDescription,
+    image: [`${site.url}/sigorta/${product.slug}/opengraph-image`, `${site.url}${img.src}`],
     areaServed: { "@type": "City", name: "İstanbul" },
     provider: {
       "@type": "InsuranceAgency",
@@ -94,37 +98,30 @@ export default async function ProductPage({ params }: Props) {
               </p>
             </div>
 
-            <div className="card p-6 sm:p-8">
-              <h2 className="mb-4 flex items-center gap-2 text-base font-bold text-navy-950">
-                <Icon name="shieldCheck" className="h-5 w-5 text-brand-600" />
-                Neler Teminat Altında?
-              </h2>
-              <ul className="grid gap-3">
-                {product.coverages.slice(0, 6).map((c) => (
-                  <li key={c.title} className="flex items-start gap-3">
-                    <Icon
-                      name="check"
-                      className="mt-0.5 h-4.5 w-4.5 shrink-0 rounded-full bg-emerald-100 p-0.5 text-emerald-600"
-                      strokeWidth={2.5}
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-navy-950">{c.title}</p>
-                      <p className="text-xs text-navy-900/60">{c.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              priority
+              unoptimized
+              sizes="(max-width: 1024px) 100vw, 520px"
+              className="w-full rounded-3xl border border-navy-900/8 shadow-[var(--shadow-card)]"
+            />
           </div>
         </div>
       </section>
 
-      {/* Tüm teminatlar */}
-      {product.coverages.length > 6 && (
+      {/* Teminatlar */}
+      {product.coverages.length > 0 && (
         <section className="container-x py-14" aria-labelledby="teminatlar">
-          <h2 id="teminatlar" className="section-title mb-8">
-            Tüm Teminatlar
+          <h2 id="teminatlar" className="section-title mb-2">
+            Neler Teminat Altında?
           </h2>
+          <p className="mb-8 max-w-2xl text-navy-900/60">
+            {product.shortName} poliçenizde yer alabilecek teminatlar. Hangilerinin size gerekli
+            olduğunu danışmanımızla birlikte belirleyelim.
+          </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {product.coverages.map((c) => (
               <div key={c.title} className="card p-5">

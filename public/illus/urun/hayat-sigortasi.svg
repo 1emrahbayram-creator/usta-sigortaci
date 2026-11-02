@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-hy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-hy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-hy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-hy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-hy"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-hy)">
+    <rect width="800" height="600" fill="url(#sky-hy)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- arkada soluk büyük kalp -->
+    <path d="M400 489 C321 422 232 359 232 290 C232 241 270 207 315 207 C346 207 375 225 400 256 C425 225 454 207 485 207 C530 207 568 241 568 290 C568 359 478 422 400 489 Z"
+          fill="#1FA3D8" opacity=".22"/>
+
+    <!-- koruma yayı -->
+    <path d="M150 272 Q400 118 650 272" stroke="url(#arc-hy)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- zemin -->
+    <rect x="96" y="486" width="608" height="14" rx="7" fill="#D2EEFB"/>
+
+    <!-- yetişkin 1 (lacivert) -->
+    <circle cx="318" cy="320" r="37" fill="url(#navy-hy)"/>
+    <path d="M282 486 Q270 486 270 474 V406 C270 376 291 354 318 354 C345 354 366 376 366 406 V474 Q366 486 354 486 Z"
+          fill="url(#navy-hy)"/>
+
+    <!-- yetişkin 2 (mavi) -->
+    <circle cx="482" cy="320" r="37" fill="url(#blue-hy)"/>
+    <path d="M446 486 Q434 486 434 474 V406 C434 376 455 354 482 354 C509 354 530 376 530 406 V474 Q530 486 518 486 Z"
+          fill="url(#blue-hy)"/>
+
+    <!-- çocuk (küçük figür) -->
+    <circle cx="400" cy="380" r="27" fill="#1FA3D8"/>
+    <path d="M374 486 Q366 486 366 478 V440 C366 418 381 404 400 404 C419 404 434 418 434 440 V478 Q434 486 426 486 Z"
+          fill="#5CC4EC"/>
+
+    <!-- gövde alt gölge bandı -->
+    <g fill="#0E2D6B" opacity=".1">
+      <path d="M270 466 H366 V474 Q366 486 354 486 H282 Q270 486 270 474 Z"/>
+      <path d="M434 466 H530 V474 Q530 486 518 486 H446 Q434 486 434 474 Z"/>
+    </g>
+
+    <!-- küçük kalpler -->
+    <g fill="#5CC4EC" opacity=".5">
+      <path d="M612 268 C598 258 584 248 584 236 C584 228 590 223 597 223 C603 223 608 227 612 232 C616 227 621 223 627 223 C634 223 640 228 640 236 C640 248 626 258 612 268 Z"/>
+    </g>
+    <path d="M196 324 C186 317 176 310 176 302 C176 296 180 292 186 292 C190 292 194 295 196 298 C198 295 202 292 206 292 C212 292 216 296 216 302 C216 310 206 317 196 324 Z"
+          fill="#5CC4EC" opacity=".6"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="168" cy="178" rx="44" ry="25"/>
+      <ellipse cx="206" cy="172" rx="32" ry="19"/>
+    </g>
+
+    <!-- buz mavisi noktalar -->
+    <g fill="#5CC4EC" opacity=".4">
+      <circle cx="700" cy="416" r="11"/>
+      <circle cx="106" cy="392" r="9"/>
+      <circle cx="664" cy="344" r="7"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

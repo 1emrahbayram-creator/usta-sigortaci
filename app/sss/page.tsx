@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { PageHero } from "@/components/page-hero";
+import { pageImage } from "@/lib/images";
 import { FaqJsonLd, FaqList } from "@/components/faq";
 import { site } from "@/lib/site";
 import { products } from "@/lib/products";
@@ -56,15 +58,21 @@ export default function FaqPage() {
       <FaqJsonLd items={allFaqs} />
       <Breadcrumbs items={[{ name: "Sık Sorulan Sorular" }]} />
 
-      <div className="mx-auto mt-6 max-w-3xl">
-        <h1 className="text-3xl font-bold text-navy-950 sm:text-4xl">Sık Sorulan Sorular</h1>
-        <p className="mt-3 mb-10 text-navy-900/60">
-          Aradığınız yanıtı bulamazsanız {site.phone} numaralı hattımızdan veya{" "}
-          <Link href="/iletisim" className="font-semibold text-brand-700 hover:underline">
-            iletişim sayfamızdan
-          </Link>{" "}
-          bize ulaşabilirsiniz.
-        </p>
+      <PageHero
+        title="Sık Sorulan Sorular"
+        desc={
+          <>
+            Aradığınız yanıtı bulamazsanız {site.phone} numaralı hattımızdan veya{" "}
+            <Link href="/iletisim" className="font-semibold text-brand-700 hover:underline">
+              iletişim sayfamızdan
+            </Link>{" "}
+            bize ulaşabilirsiniz.
+          </>
+        }
+        image={pageImage("sss")}
+      />
+
+      <div className="mx-auto max-w-3xl">
 
         <h2 className="mb-4 text-lg font-bold text-navy-950">Genel</h2>
         <FaqList items={generalFaqs} />

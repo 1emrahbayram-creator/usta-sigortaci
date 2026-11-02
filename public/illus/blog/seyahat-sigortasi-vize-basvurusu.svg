@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-svz" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-svz" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-svz" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-svz" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-svz"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-svz)">
+    <rect width="800" height="600" fill="url(#sky-svz)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="192" cy="158" rx="45" ry="26"/>
+      <ellipse cx="232" cy="152" rx="33" ry="19"/>
+      <ellipse cx="596" cy="296" rx="34" ry="19"/>
+      <ellipse cx="624" cy="292" rx="24" ry="14"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-svz)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- kesik çizgili uçuş rotası -->
+    <path d="M540 268 Q612 176 716 204" stroke="#1FA3D8" stroke-width="4" stroke-linecap="round"
+          stroke-dasharray="13 15" opacity=".6"/>
+
+    <!-- uçak (kağıt uçak) -->
+    <g transform="rotate(40 688 180)">
+      <path d="M688 140 L722 216 L688 198 L654 216 Z" fill="url(#blue-svz)"/>
+      <path d="M688 140 L688 198 L654 216 Z" fill="#0E2D6B" opacity=".22"/>
+    </g>
+
+    <!-- pasaport -->
+    <g transform="rotate(-8 400 356)">
+      <!-- beyaz sayfa, köşesi kıvrık -->
+      <path d="M302 252 H522 V452 L500 474 H316 C308 474 302 468 302 460 Z" fill="#FFFFFF"/>
+      <path d="M522 452 H506 C502 452 500 455 500 459 V474 Z" fill="#D2EEFB"/>
+      <path d="M330 300 H480 M330 338 H454" stroke="#D2EEFB" stroke-width="11" stroke-linecap="round"/>
+      <!-- lacivert kapak -->
+      <rect x="282" y="236" width="222" height="228" rx="16" fill="url(#navy-svz)"/>
+      <rect x="282" y="236" width="18" height="228" rx="9" fill="#0E2D6B" opacity=".4"/>
+      <!-- kapak amblemi: dünya -->
+      <circle cx="396" cy="352" r="42" fill="#1FA3D8" opacity=".16"/>
+      <circle cx="396" cy="352" r="42" stroke="#5CC4EC" stroke-width="3" opacity=".65"/>
+      <ellipse cx="396" cy="352" rx="17" ry="42" stroke="#5CC4EC" stroke-width="3" opacity=".5"/>
+      <path d="M354 352 H438" stroke="#5CC4EC" stroke-width="3" opacity=".5" stroke-linecap="round"/>
+      <rect x="356" y="420" width="80" height="12" rx="6" fill="#5CC4EC" opacity=".45"/>
+    </g>
+
+    <!-- vize damgası -->
+    <circle cx="516" cy="298" r="54" fill="#FFFFFF" opacity=".95"/>
+    <circle cx="516" cy="298" r="44" stroke="#1FA3D8" stroke-width="11" opacity=".9"/>
+    <circle cx="516" cy="298" r="30" stroke="#5CC4EC" stroke-width="4" stroke-dasharray="9 10" opacity=".7"/>
+    <path d="M502 298 L512 308 L532 286" stroke="#0B7FBF" stroke-width="8"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- bavul -->
+    <path d="M196 388 V376 C196 369 201 364 208 364 H232 C239 364 244 369 244 376 V388"
+          stroke="#0E2D6B" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+    <rect x="158" y="386" width="124" height="98" rx="16" fill="url(#blue-svz)"/>
+    <rect x="158" y="416" width="124" height="16" rx="8" fill="#FFFFFF" opacity=".6"/>
+    <rect x="176" y="448" width="34" height="12" rx="6" fill="#0E2D6B" opacity=".2"/>
+
+    <!-- destek noktaları -->
+    <g fill="#5CC4EC" opacity=".55">
+      <circle cx="604" cy="412" r="9"/>
+      <circle cx="632" cy="440" r="6"/>
+      <circle cx="168" cy="300" r="7"/>
+    </g>
+
+    <!-- zemin -->
+    <rect x="96" y="486" width="608" height="14" rx="7" fill="#D2EEFB"/>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

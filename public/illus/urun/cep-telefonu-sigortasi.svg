@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-cp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-cp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-cp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-cp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-cp"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-cp)">
+    <rect width="800" height="600" fill="url(#sky-cp)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="190" cy="160" rx="45" ry="25"/>
+      <ellipse cx="229" cy="154" rx="33" ry="19"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-cp)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- koruma halkaları (telefonun çevresi) -->
+    <circle cx="400" cy="362" r="200" fill="#D2EEFB" opacity=".40"/>
+    <circle cx="400" cy="362" r="200" stroke="#5CC4EC" stroke-width="4" opacity=".5"/>
+    <circle cx="400" cy="362" r="228" stroke="#5CC4EC" stroke-width="3" opacity=".3" stroke-dasharray="14 18" stroke-linecap="round"/>
+
+    <!-- telefon gövdesi -->
+    <rect x="331" y="230" width="138" height="266" rx="26" fill="url(#navy-cp)"/>
+    <rect x="468" y="292" width="6" height="40" rx="3" fill="#1749A5"/>
+    <!-- hoparlör -->
+    <rect x="382" y="238" width="36" height="6" rx="3" fill="#FFFFFF" opacity=".4"/>
+    <!-- ekran -->
+    <rect x="345" y="252" width="110" height="206" rx="12" fill="#FFFFFF"/>
+    <!-- alt ince çizgi -->
+    <rect x="378" y="474" width="44" height="7" rx="3.5" fill="#FFFFFF" opacity=".55"/>
+
+    <!-- ekrandaki kalkan -->
+    <path d="M400 296 L440 311 V352 C440 378 423 395 400 404 C377 395 360 378 360 352 V311 Z" fill="url(#blue-cp)"/>
+    <path d="M387 349 L396 358 L414 338" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- ekran alt bilgi şeritleri -->
+    <rect x="364" y="424" width="72" height="9" rx="4.5" fill="#D2EEFB"/>
+    <rect x="378" y="441" width="44" height="8" rx="4" fill="#D2EEFB"/>
+
+    <!-- kalkan rozeti (sağ alt) -->
+    <circle cx="586" cy="456" r="38" fill="#FFFFFF"/>
+    <path d="M586 430 L608 439 V457 C608 471 599 480 586 484 C573 480 564 471 564 457 V439 Z" fill="url(#navy-cp)"/>
+    <path d="M578 456 L584 462 L597 449" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- buz mavisi noktalar -->
+    <circle cx="238" cy="268" r="9" fill="#5CC4EC" opacity=".5"/>
+    <circle cx="214" cy="330" r="6" fill="#5CC4EC" opacity=".35"/>
+    <circle cx="588" cy="250" r="8" fill="#5CC4EC" opacity=".45"/>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

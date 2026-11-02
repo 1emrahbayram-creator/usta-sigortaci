@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-tss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-tss" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-tss" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-tss" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-tss"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-tss)">
+    <rect width="800" height="600" fill="url(#sky-tss)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="178" cy="162" rx="44" ry="25"/>
+      <ellipse cx="216" cy="156" rx="32" ry="19"/>
+      <ellipse cx="618" cy="238" rx="36" ry="20"/>
+      <ellipse cx="648" cy="234" rx="26" ry="15"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-tss)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- arka blok -->
+    <rect x="186" y="332" width="54" height="156" rx="10" fill="#D2EEFB"/>
+
+    <!-- çatıdaki artı -->
+    <rect x="306" y="202" width="20" height="46" rx="7" fill="url(#blue-tss)"/>
+    <rect x="293" y="215" width="46" height="20" rx="7" fill="url(#blue-tss)"/>
+
+    <!-- hastane: çatı bandı ve gövde -->
+    <rect x="222" y="248" width="186" height="26" rx="10" fill="url(#blue-tss)"/>
+    <rect x="236" y="268" width="158" height="220" rx="14" fill="url(#navy-tss)"/>
+
+    <!-- pencereler -->
+    <g fill="#FFFFFF" opacity=".9">
+      <rect x="256" y="296" width="34" height="30" rx="7"/>
+      <rect x="298" y="296" width="34" height="30" rx="7"/>
+      <rect x="340" y="296" width="34" height="30" rx="7"/>
+      <rect x="256" y="338" width="34" height="30" rx="7"/>
+      <rect x="340" y="338" width="34" height="30" rx="7"/>
+      <rect x="256" y="380" width="34" height="30" rx="7"/>
+      <rect x="298" y="380" width="34" height="30" rx="7"/>
+      <rect x="340" y="380" width="34" height="30" rx="7"/>
+    </g>
+    <rect x="298" y="338" width="34" height="30" rx="7" fill="#5CC4EC"/>
+
+    <!-- giriş -->
+    <path d="M294 488 V448 C294 436 303 428 315 428 C327 428 336 436 336 448 V488 Z" fill="#ECF6FC"/>
+    <circle cx="327" cy="460" r="4" fill="#0E2D6B" opacity=".4"/>
+
+    <!-- kontrol listesi kartı -->
+    <rect x="404" y="240" width="176" height="244" rx="20" fill="#FFFFFF"/>
+    <rect x="404" y="240" width="176" height="244" rx="20" stroke="#0E2D6B" stroke-width="2" opacity=".12"/>
+    <rect x="432" y="262" width="92" height="16" rx="8" fill="url(#navy-tss)"/>
+
+    <g>
+      <circle cx="438" cy="306" r="17" fill="url(#blue-tss)"/>
+      <path d="M430 306 L436 312 L447 299" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="466" y="300" width="88" height="12" rx="6" fill="#D2EEFB"/>
+    </g>
+    <g>
+      <circle cx="438" cy="358" r="17" fill="url(#blue-tss)"/>
+      <path d="M430 358 L436 364 L447 351" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="466" y="352" width="80" height="12" rx="6" fill="#D2EEFB"/>
+    </g>
+    <g>
+      <circle cx="438" cy="410" r="17" fill="url(#blue-tss)"/>
+      <path d="M430 410 L436 416 L447 403" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="466" y="404" width="88" height="12" rx="6" fill="#D2EEFB"/>
+    </g>
+    <g>
+      <circle cx="438" cy="462" r="17" fill="url(#blue-tss)"/>
+      <path d="M430 462 L436 468 L447 455" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="466" y="456" width="68" height="12" rx="6" fill="#D2EEFB"/>
+    </g>
+
+    <!-- destek noktaları -->
+    <g fill="#5CC4EC" opacity=".55">
+      <circle cx="616" cy="406" r="9"/>
+      <circle cx="642" cy="434" r="6"/>
+      <circle cx="166" cy="286" r="7"/>
+    </g>
+
+    <!-- zemin -->
+    <rect x="96" y="488" width="608" height="14" rx="7" fill="#D2EEFB"/>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

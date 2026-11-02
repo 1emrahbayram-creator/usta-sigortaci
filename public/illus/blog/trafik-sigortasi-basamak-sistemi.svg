@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-btb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-btb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-btb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-btb" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-btb"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-btb)">
+    <rect width="800" height="600" fill="url(#sky-btb)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="186" cy="166" rx="44" ry="25"/>
+      <ellipse cx="224" cy="160" rx="32" ry="19"/>
+      <ellipse cx="146" cy="262" rx="34" ry="19"/>
+    </g>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-btb)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- zemin çizgisi -->
+    <rect x="96" y="486" width="608" height="14" rx="7" fill="#D2EEFB"/>
+
+    <!-- yükselen beş basamak -->
+    <rect x="230" y="436" width="62" height="58" rx="12" fill="#5CC4EC"/>
+    <rect x="302" y="394" width="62" height="100" rx="12" fill="#1FA3D8"/>
+    <rect x="374" y="352" width="62" height="142" rx="12" fill="#0B7FBF"/>
+    <rect x="446" y="310" width="62" height="184" rx="12" fill="#1749A5"/>
+    <rect x="518" y="268" width="62" height="226" rx="12" fill="url(#navy-btb)"/>
+    <!-- basamak üstü parlaklıklar -->
+    <g fill="#FFFFFF" opacity=".3">
+      <rect x="244" y="448" width="34" height="8" rx="4"/>
+      <rect x="316" y="406" width="34" height="8" rx="4"/>
+      <rect x="388" y="364" width="34" height="8" rx="4"/>
+      <rect x="460" y="322" width="34" height="8" rx="4"/>
+      <rect x="532" y="280" width="34" height="8" rx="4"/>
+    </g>
+
+    <!-- basamakların ÜSTÜNDEN geçen yükseliş oku -->
+    <path d="M248 418 Q420 288 592 222" stroke="#1FA3D8" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+    <polygon points="618,208 592,234 584,208" fill="#1FA3D8"/>
+    <circle cx="248" cy="418" r="9" fill="#1FA3D8" opacity=".8"/>
+
+    <!-- üst basamakların üstünde kalkan rozeti -->
+    <g>
+      <circle cx="505" cy="170" r="40" fill="#FFFFFF"/>
+      <path d="M505 140 L531 150 V172 C531 189 520 201 505 206 C490 201 479 189 479 172 V150 Z" fill="url(#navy-btb)"/>
+      <path d="M495 171 L503 179 L518 162" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- konuyu anlatan küçük araç (sol tabanda, yola oturur) -->
+    <g transform="translate(33 283.4) scale(0.42)">
+      <path d="M150 446 L150 408 C150 398 156 391 165 388 L228 370 L264 332 C271 324 281 319 292 319 L350 319 C361 319 371 324 378 332 L408 370 L420 374 C429 377 434 385 434 394 L434 446 C434 453 429 458 422 458 L162 458 C155 458 150 453 150 446 Z"
+            fill="url(#blue-btb)"/>
+      <path d="M152 434 L432 434 L432 446 C432 453 428 457 421 457 L163 457 C156 457 152 453 152 446 Z" fill="#0E2D6B" opacity=".12"/>
+      <path d="M274 342 L296 342 C299 342 301 344 301 347 L301 366 L254 366 Z" fill="#FFFFFF" opacity=".95"/>
+      <path d="M310 342 L348 342 C353 342 357 344 360 348 L376 366 L310 366 Z" fill="#FFFFFF" opacity=".95"/>
+      <rect x="414" y="400" width="20" height="14" rx="7" fill="#FFFFFF" opacity=".95"/>
+      <circle cx="214" cy="456" r="36" fill="url(#navy-btb)"/>
+      <circle cx="214" cy="456" r="15" fill="#ECF6FC"/>
+      <circle cx="384" cy="456" r="36" fill="url(#navy-btb)"/>
+      <circle cx="384" cy="456" r="15" fill="#ECF6FC"/>
+    </g>
+
+    <!-- buz mavisi noktalar -->
+    <g fill="#5CC4EC" opacity=".45">
+      <circle cx="652" cy="388" r="9"/>
+      <circle cx="676" cy="348" r="6"/>
+      <circle cx="178" cy="352" r="7"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Icon } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
 import { FaqJsonLd, FaqList } from "@/components/faq";
+import { pageImage } from "@/lib/images";
 import { site } from "@/lib/site";
 import { products, popularProducts } from "@/lib/products";
 import { insurers } from "@/lib/insurers";
@@ -203,26 +205,39 @@ export default function HomePage() {
 
       {/* ================= NASIL ÇALIŞIR ================= */}
       <section className="container-x py-16 lg:py-20" aria-labelledby="nasil-calisir">
-        <div className="mb-10 text-center">
-          <p className="section-kicker">Nasıl çalışıyoruz?</p>
-          <h2 id="nasil-calisir" className="section-title">
-            3 adımda usta işi sigorta
-          </h2>
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.15fr]">
+          <Image
+            src={pageImage("anasayfa").src}
+            alt={pageImage("anasayfa").alt}
+            width={800}
+            height={600}
+            unoptimized
+            sizes="(max-width: 1024px) 100vw, 500px"
+            className="w-full rounded-3xl border border-navy-900/8 shadow-[var(--shadow-card)]"
+          />
+          <div>
+            <p className="section-kicker">Nasıl çalışıyoruz?</p>
+            <h2 id="nasil-calisir" className="section-title">
+              3 adımda usta işi sigorta
+            </h2>
+            <ol className="mt-8 space-y-5">
+              {steps.map((s, i) => (
+                <li key={s.title} className="flex gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
+                    <Icon name={s.icon} className="h-6 w-6" />
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-navy-950">
+                      <span className="mr-2 text-brand-600">{i + 1}.</span>
+                      {s.title}
+                    </h3>
+                    <p className="mt-1 text-sm leading-6 text-navy-900/60">{s.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
-        <ol className="grid gap-6 sm:grid-cols-3">
-          {steps.map((s, i) => (
-            <li key={s.title} className="card relative p-6 text-center">
-              <span className="absolute top-4 left-4 font-display text-4xl font-bold text-cloud-200">
-                {i + 1}
-              </span>
-              <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
-                <Icon name={s.icon} className="h-7 w-7" />
-              </span>
-              <h3 className="text-lg font-bold text-navy-950">{s.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-navy-900/60">{s.desc}</p>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* ================= ÜRÜNLER ================= */}

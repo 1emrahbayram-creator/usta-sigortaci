@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-hkk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-hkk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-hkk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-hkk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-hkk"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-hkk)">
+    <rect width="800" height="600" fill="url(#sky-hkk)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- koruma yayı -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-hkk)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- pencere -->
+    <rect x="306" y="104" width="188" height="126" rx="14" fill="#ECF6FC"/>
+    <circle cx="452" cy="142" r="19" fill="#FFFFFF" opacity=".9"/>
+    <g fill="#FFFFFF" opacity=".85">
+      <ellipse cx="348" cy="188" rx="32" ry="15"/>
+      <ellipse cx="376" cy="182" rx="22" ry="11"/>
+    </g>
+    <rect x="306" y="104" width="188" height="126" rx="14" stroke="#1FA3D8" stroke-width="7"/>
+    <path d="M400 110 V224 M312 167 H488" stroke="#1FA3D8" stroke-width="6" opacity=".75" stroke-linecap="round"/>
+
+    <!-- saksı bitkisi (sağ) -->
+    <g>
+      <path d="M626 416 V356" stroke="#0B7FBF" stroke-width="5" stroke-linecap="round"/>
+      <path d="M626 402 C604 398 586 378 582 352 C608 352 624 374 626 402 Z" fill="url(#blue-hkk)"/>
+      <path d="M626 390 C648 386 666 366 670 340 C644 340 628 362 626 390 Z" fill="url(#blue-hkk)"/>
+      <path d="M626 372 C614 352 614 326 626 306 C638 326 638 352 626 372 Z" fill="url(#blue-hkk)"/>
+      <rect x="588" y="410" width="76" height="18" rx="9" fill="#0E2D6B"/>
+      <path d="M594 430 L658 430 L650 482 C649 487 645 490 640 490 L612 490 C607 490 603 487 602 482 Z" fill="url(#navy-hkk)"/>
+    </g>
+
+    <!-- ekip: yan yana iki figür -->
+    <g>
+      <path d="M342 308 C320 308 305 325 303 347 L297 434 L387 434 L381 347 C379 325 364 308 342 308 Z" fill="url(#navy-hkk)"/>
+      <circle cx="342" cy="272" r="30" fill="url(#blue-hkk)"/>
+    </g>
+    <g>
+      <path d="M458 308 C436 308 421 325 419 347 L413 434 L503 434 L497 347 C495 325 480 308 458 308 Z" fill="url(#blue-hkk)"/>
+      <circle cx="458" cy="272" r="30" fill="url(#navy-hkk)"/>
+    </g>
+
+    <!-- masa -->
+    <rect x="228" y="428" width="344" height="22" rx="11" fill="url(#navy-hkk)"/>
+    <rect x="252" y="450" width="296" height="38" rx="12" fill="#0E2D6B"/>
+    <rect x="272" y="462" width="88" height="8" rx="4" fill="#FFFFFF" opacity=".16"/>
+
+    <!-- laptop -->
+    <rect x="336" y="348" width="116" height="64" rx="8" fill="#FFFFFF"/>
+    <rect x="344" y="356" width="100" height="48" rx="5" fill="#ECF6FC"/>
+    <g fill="#1FA3D8">
+      <rect x="352" y="363" width="60" height="7" rx="3" opacity=".6"/>
+      <rect x="352" y="376" width="78" height="7" rx="3" opacity=".4"/>
+      <rect x="352" y="389" width="44" height="7" rx="3" opacity=".5"/>
+    </g>
+    <rect x="322" y="412" width="144" height="16" rx="8" fill="#FFFFFF"/>
+
+    <!-- belge yığını -->
+    <g>
+      <rect x="504" y="392" width="62" height="11" rx="5" fill="#FFFFFF"/>
+      <rect x="498" y="402" width="68" height="11" rx="5" fill="#FFFFFF"/>
+      <rect x="492" y="412" width="76" height="16" rx="7" fill="#FFFFFF"/>
+      <rect x="502" y="418" width="38" height="5" rx="2" fill="#1FA3D8" opacity=".45"/>
+    </g>
+
+    <!-- zemin bandı -->
+    <rect x="96" y="488" width="608" height="14" rx="7" fill="#D2EEFB"/>
+
+    <!-- buz mavisi noktalar -->
+    <g fill="#5CC4EC" opacity=".4">
+      <circle cx="176" cy="236" r="10"/>
+      <circle cx="222" cy="288" r="6"/>
+      <circle cx="690" cy="222" r="8"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

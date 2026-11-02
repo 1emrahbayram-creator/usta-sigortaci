@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-dk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-dk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-dk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-dk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-dk"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-dk)">
+    <rect width="800" height="600" fill="url(#sky-dk)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-dk)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- arka binalar -->
+    <rect x="212" y="300" width="80" height="188" rx="10" fill="#D2EEFB"/>
+    <rect x="516" y="276" width="76" height="212" rx="10" fill="#D2EEFB"/>
+
+    <!-- ana bina -->
+    <rect x="306" y="214" width="188" height="274" rx="14" fill="url(#navy-dk)"/>
+    <!-- çatı bandı -->
+    <rect x="292" y="196" width="216" height="26" rx="10" fill="url(#blue-dk)"/>
+    <!-- pencereler -->
+    <g fill="#FFFFFF" opacity=".9">
+      <rect x="332" y="248" width="40" height="34" rx="7"/>
+      <rect x="388" y="248" width="40" height="34" rx="7"/>
+      <rect x="444" y="248" width="26" height="34" rx="7"/>
+      <rect x="332" y="302" width="40" height="34" rx="7"/>
+      <rect x="388" y="302" width="40" height="34" rx="7"/>
+      <rect x="444" y="302" width="26" height="34" rx="7"/>
+      <rect x="332" y="356" width="40" height="34" rx="7"/>
+      <rect x="444" y="356" width="26" height="34" rx="7"/>
+    </g>
+    <!-- ışıklı pencere -->
+    <rect x="388" y="356" width="40" height="34" rx="7" fill="#5CC4EC"/>
+    <!-- giriş -->
+    <path d="M374 488 V432 C374 420 383 412 395 412 L405 412 C417 412 426 420 426 432 V488 Z" fill="#ECF6FC"/>
+    <circle cx="416" cy="452" r="4" fill="#0E2D6B" opacity=".4"/>
+
+    <!-- koruyucu kalkan -->
+    <path d="M400 150 L560 206 V322 C560 410 495 470 400 500 C305 470 240 410 240 322 V206 Z"
+          fill="#1FA3D8" opacity=".14"/>
+    <path d="M400 150 L560 206 V322 C560 410 495 470 400 500 C305 470 240 410 240 322 V206 Z"
+          stroke="#1FA3D8" stroke-width="4" opacity=".55"/>
+
+    <!-- sismik dalgalar -->
+    <g stroke="#1FA3D8" stroke-linecap="round" fill="none">
+      <path d="M150 498 Q176 470 202 498" stroke-width="5" opacity=".5"/>
+      <path d="M120 498 Q160 452 200 498" stroke-width="4" opacity=".3"/>
+      <path d="M598 498 Q624 470 650 498" stroke-width="5" opacity=".5"/>
+      <path d="M598 498 Q638 452 678 498" stroke-width="4" opacity=".3"/>
+    </g>
+    <!-- zemin çizgisi -->
+    <rect x="96" y="488" width="608" height="14" rx="7" fill="#D2EEFB"/>
+
+    <!-- onay rozeti -->
+    <g>
+      <circle cx="596" cy="384" r="38" fill="#FFFFFF"/>
+      <circle cx="596" cy="384" r="30" fill="url(#blue-dk)"/>
+      <path d="M584 384 L592 392 L609 374" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g fill="#FFFFFF" opacity=".75">
+      <ellipse cx="188" cy="168" rx="44" ry="25"/>
+      <ellipse cx="226" cy="162" rx="32" ry="19"/>
+    </g>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>

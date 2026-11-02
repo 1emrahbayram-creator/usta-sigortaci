@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Icon } from "@/components/icons";
 import { posts } from "@/lib/blog";
+import { postImage } from "@/lib/images";
 import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
@@ -27,9 +29,18 @@ export default function BlogPage() {
       </div>
 
       {/* Öne çıkan yazı */}
-      <article className="card group relative mb-10 grid gap-6 overflow-hidden p-8 transition-all hover:shadow-lift lg:grid-cols-2 lg:p-10">
-        <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-brand-50 to-transparent lg:block" aria-hidden="true" />
-        <div className="relative">
+      <article className="card group relative mb-10 grid items-center gap-8 overflow-hidden transition-all hover:shadow-lift lg:grid-cols-[1fr_1.05fr]">
+        <Image
+          src={postImage(featured.slug).src}
+          alt={postImage(featured.slug).alt}
+          width={800}
+          height={600}
+          priority
+          unoptimized
+          sizes="(max-width: 1024px) 100vw, 520px"
+          className="h-full w-full object-cover"
+        />
+        <div className="relative p-8 lg:py-10 lg:pr-10 lg:pl-0">
           <span className="badge mb-4 bg-accent-50 text-accent-600">
             <Icon name="sparkle" className="h-3 w-3" />
             Öne çıkan
@@ -51,19 +62,30 @@ export default function BlogPage() {
         {rest.map((post) => (
           <article
             key={post.slug}
-            className="card group relative flex flex-col p-6 transition-all hover:-translate-y-1 hover:shadow-lift"
+            className="card group relative flex flex-col overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lift"
           >
-            <span className="badge mb-4 w-fit bg-brand-50 text-brand-700">{post.category}</span>
-            <h2 className="text-base leading-6 font-bold text-navy-950">
-              <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0">
-                {post.title}
-              </Link>
-            </h2>
-            <p className="mt-2 flex-1 text-sm leading-6 text-navy-900/60">{post.excerpt}</p>
-            <p className="mt-4 flex items-center gap-2 text-xs text-navy-900/50">
-              <Icon name="calendar" className="h-3.5 w-3.5" />
-              {formatDate(post.date)} · {post.readMinutes} dk
-            </p>
+            <Image
+              src={postImage(post.slug).src}
+              alt={postImage(post.slug).alt}
+              width={800}
+              height={600}
+              unoptimized
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+              className="h-44 w-full border-b border-navy-900/8 object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+            />
+            <div className="flex flex-1 flex-col p-6">
+              <span className="badge mb-3 w-fit bg-brand-50 text-brand-700">{post.category}</span>
+              <h2 className="text-base leading-6 font-bold text-navy-950">
+                <Link href={`/blog/${post.slug}`} className="after:absolute after:inset-0">
+                  {post.title}
+                </Link>
+              </h2>
+              <p className="mt-2 flex-1 text-sm leading-6 text-navy-900/60">{post.excerpt}</p>
+              <p className="mt-4 flex items-center gap-2 text-xs text-navy-900/50">
+                <Icon name="calendar" className="h-3.5 w-3.5" />
+                {formatDate(post.date)} · {post.readMinutes} dk
+              </p>
+            </div>
           </article>
         ))}
       </div>

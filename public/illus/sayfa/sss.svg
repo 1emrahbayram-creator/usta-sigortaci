@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky-ss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5FAFD"/><stop offset="1" stop-color="#DCF0FB"/>
+    </linearGradient>
+    <linearGradient id="blue-ss" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CC4EC"/><stop offset=".55" stop-color="#1FA3D8"/><stop offset="1" stop-color="#0B7FBF"/>
+    </linearGradient>
+    <linearGradient id="navy-ss" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1749A5"/><stop offset="1" stop-color="#0E2D6B"/>
+    </linearGradient>
+    <linearGradient id="arc-ss" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5CC4EC" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5CC4EC" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#5CC4EC" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame-ss"><rect width="800" height="600" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame-ss)">
+    <rect width="800" height="600" fill="url(#sky-ss)"/>
+    <circle cx="648" cy="120" r="165" fill="#FFFFFF" opacity=".5"/>
+    <circle cx="130" cy="470" r="120" fill="#D2EEFB" opacity=".55"/>
+
+    <!-- bulutlar -->
+    <g fill="#FFFFFF" opacity=".7">
+      <ellipse cx="176" cy="170" rx="43" ry="24"/>
+      <ellipse cx="212" cy="164" rx="31" ry="18"/>
+    </g>
+
+    <!-- koruma yayi -->
+    <path d="M150 300 Q400 130 650 300" stroke="url(#arc-ss)" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- soru balonu: buyuk lacivert -->
+    <path d="M196 374 L182 430 L246 378 Z" fill="url(#navy-ss)"/>
+    <rect x="150" y="214" width="250" height="162" rx="32" fill="url(#navy-ss)"/>
+    <path d="M247 278 C247 257 262 245 275 245 C290 245 302 256 302 270 C302 285 288 291 281 298 C276 303 274 309 274 317"
+          stroke="#FFFFFF" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="274" cy="343" r="9.5" fill="#FFFFFF"/>
+
+    <!-- cevap balonu: mavi -->
+    <path d="M466 464 L450 512 L516 466 Z" fill="url(#blue-ss)"/>
+    <rect x="424" y="322" width="228" height="144" rx="30" fill="url(#blue-ss)"/>
+    <g fill="#FFFFFF" opacity=".92">
+      <rect x="454" y="356" width="168" height="13" rx="6.5"/>
+      <rect x="454" y="386" width="140" height="13" rx="6.5"/>
+      <rect x="454" y="416" width="104" height="13" rx="6.5"/>
+    </g>
+
+    <!-- cevap balonunda onay rozeti -->
+    <circle cx="636" cy="486" r="35" fill="#FFFFFF"/>
+    <circle cx="636" cy="486" r="27" fill="url(#blue-ss)"/>
+    <path d="M624 486 L632 494 L649 476" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- kucuk buz mavisi noktalar -->
+    <circle cx="700" cy="286" r="13" fill="#D2EEFB"/>
+    <circle cx="112" cy="262" r="10" fill="#D2EEFB"/>
+    <circle cx="486" cy="250" r="9" fill="#D2EEFB"/>
+
+    <ellipse cx="400" cy="508" rx="268" ry="26" fill="#0E2D6B" opacity=".08"/>
+  </g>
+</svg>
